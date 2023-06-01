@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from 'react';
+import MobileMenu from "./MobileMenu";
 
 const headerItems = [
     "Our company",
@@ -39,6 +40,8 @@ const Header = () => {
                 </li>
             ))}
         </ul>
+
+        <MobileMenu />
     </header>
   )
 }
