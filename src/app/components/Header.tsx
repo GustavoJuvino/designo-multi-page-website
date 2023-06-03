@@ -12,12 +12,11 @@ const Header = () => {
   return (
     <header className="
             flex
-            sm:justify-around
+            sm:justify-between
             justify-between
             items-center
             mt-16
-            sm:px-5
-            px-7
+            px-[165px]
         "
     >
         <div>

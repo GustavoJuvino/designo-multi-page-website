@@ -8,7 +8,7 @@ const MobileMenu = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <section>
+    <section className="sm:hidden">
       {/* Hamburger Menu */}
         <div className={styles.mobileButton}>
           <span
