@@ -12,11 +12,11 @@ const Header = () => {
   return (
     <header className="
             flex
-            sm:justify-between
             justify-between
             items-center
             mt-16
-            px-[165px]
+            xl:px-[165px]
+            px-9
         "
     >
         <div>
@@ -31,7 +31,8 @@ const Header = () => {
             {headerItems.map((item) => (
                 <li className="
                         lg:px-11
-                        px-7
+                        md:px-7
+                        px-4
                         max-sm:hidden
                         cursor-pointer
                         hover:underline
