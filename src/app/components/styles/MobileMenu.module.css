@@ -6,6 +6,12 @@
     cursor: pointer;
 }
 
+@media  (min-width: 640px) {
+    .mobileButton {
+        display: none;
+    }
+}
+
 #hamburger {
     color: black;
     display: block;

@@ -25,6 +25,11 @@ module.exports = {
           letterSpacing: "5px",
           fontWeight: "500"
         }],
+        "2xl":["1.5rem", {
+          letterSpacing: "2px",
+          lineHeight: "25px",
+          fontWeight: "400"
+        }],
         "4xl": ["2.5rem", {
           lineHeight: "3rem",
           letterSpacing: "2px",

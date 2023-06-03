@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from 'react';
 import MobileMenu from "./MobileMenu";
 
-const headerItems = [
+export const headerItems = [
     "Our company",
     "Locations",
     "Contact"
@@ -13,9 +13,11 @@ const Header = () => {
     <header className="
             flex
             sm:justify-around
+            justify-between
             items-center
             mt-16
-            max-lg:px-5
+            sm:px-5
+            px-7
         "
     >
         <div>
