@@ -97,8 +97,6 @@ const HomeContainer = () => {
           "
         />
       </section>
-
-      <div>teste</div>
     </section>
   )
 }
