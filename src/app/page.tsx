@@ -10,7 +10,9 @@ export default function Home() {
     >
       <section className="
           w-[100%] 
-          h-[40rem]
+          sm:h-[40rem]
+          mobile:h-[43.75rem]
+          h-[42rem]
           flex
           max-lg:flex-col
           justify-between
@@ -26,57 +28,70 @@ export default function Home() {
       >
         {/* texts col */}
         <div className="text-white z-20 max-lg:mt-16">
-          <h1 className="text-5xl">
-            Award-winning custom <br/>
-            designs and digital <br/>
+          <h1 className="
+              mobile:text-5xl
+              text-3xl
+              font-bold
+            "
+          >
+            Award-winning custom <br id="br" />
+            designs and digital <br id="br" />
             branding solutions
           </h1>
-          <p className="text-base mt-9">
-            With over 10 years in the industry, we are experienced <br/>
-            in creating fully responsive websites, app design, and engaging <br/>
+          <p className="
+              text-base
+              mt-9
+              max-mobile:leading-[20px]
+              max-mobile:px-2
+            "
+          >
+            With over 10 years in the industry, we are experienced <br id="br" />
+            in creating fully responsive websites, app design, and engaging <br id="br" />
             brand experiences. Find out more about our services.
           </p>
           <button className="mt-10">Learn More</button>
         </div>
 
-        <span className="
-              absolute
-              lg:right-0
-              right-[-8%]
-              sm:right-[-10%]
-              max-lg:top-[16%]
-              sm:w-[640px]
-              lg:h-[100%]
-              sm:h-[640px]
-              w-[500px]
-              h-[500px]
-              sm:rounded-[100%]
-              rounded-l-[100%]
-              bg-gradient-to-t from-peach from-[40%] to-[#5D0202]
-              opacity-20
-              z-10
-            "
+        <Image 
+          width={500}
+          height={500}
+          alt="background-img"
+          src="/assets/home/bg-pattern-hero-home.svg"
+          className="
+            absolute
+            lg:right-0
+            sm:right-[-10%]
+            max-lg:top-24
+            max-sm:top-0
+            lg:w-auto
+            lg:h-auto
+            max-sm:w-[100%]
+            max-sm:h-[100%]
+            max-sm:object-cover
+            max-sm:object-left
+          "
         />
 
-  
-          <Image 
-            width={280}
-            height={572}
-            alt="phone"
-            src="/assets/home/image-hero-phone.png"
-            className="
-              lg:mt-[320px]
-              mt-[320px]
-              lg:w-[500px]
-              w-[350px]
-              h-auto
-              z-20
-              absolute
-              lg:right-0
-            "
-          />
-
+        <Image 
+          width={280}
+          height={572}
+          alt="phone"
+          src="/assets/home/image-hero-phone.png"
+          className="
+            lg:mt-[250px]
+            sm:mt-[320px]
+            lg:w-[500px]
+            sm:w-[350px]
+            max-sm:w-auto
+            max-sm:h-[500px]
+            z-20
+            sm:absolute
+            lg:right-0
+          "
+        />
       </section>
+
+      <div>teste</div>
     </main>
   )
 };

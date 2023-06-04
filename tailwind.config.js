@@ -14,6 +14,9 @@ module.exports = {
         "dark-grey": "#333136",
         "light-grey": "#F1F3F5"
       },
+      screens: {
+        "mobile": "500px"
+      },
       fontSize: {
         base: ["1rem", {
           lineHeight: "26px",

@@ -16,7 +16,8 @@ const Header = () => {
             items-center
             mt-16
             xl:px-[165px]
-            px-9
+            sm:px-9
+            px-2
         "
     >
         <div>
@@ -25,6 +26,7 @@ const Header = () => {
                 height={24}
                 alt="Logo"
                 src={"/assets/logo.png"}
+                className="max-mobile:w-36"
             />
         </div>
         <ul className="flex md:text-base text-sm text-black">
