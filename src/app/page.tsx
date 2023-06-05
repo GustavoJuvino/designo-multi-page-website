@@ -5,26 +5,27 @@ export default function Home() {
   return (
     <main>
       <HomeContainer />
-      <div className="
-          flex
-          max-xl:flex-col
-          justify-center
-          mt-[160px]
-        "
-      >
+
+      {/* Projects */}
+      <section className="flex justify-center xl:mt-[160px]">
         <div className="max-xl:hidden">
           <Projects webXL={true} />
         </div>
-        <div className="xl:hidden">
-          <Projects web={true} />
-        </div>
-        <div className="xl:ml-[30px]">
-          <Projects app={true} />
-          <div className="pt-[24px]">
-            <Projects graphic={true} />
+        <div className="
+            grid
+            grid-cols-1
+            gap-5
+            max-xl:mt-[120px]
+            xl:ml-8
+          "
+        >
+          <div className="xl:hidden">
+            <Projects web={true} />
           </div>
+          <Projects app={true} />
+          <Projects graphic={true} />
         </div>
-      </div>
+      </section>
     </main>
   )
 };

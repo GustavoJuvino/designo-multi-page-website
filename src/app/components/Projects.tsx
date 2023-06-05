@@ -23,68 +23,90 @@ const Projects: React.FC<ProjectsProps> = ({
     else if (graphic) srcImg = "graphic-design";
 
     return (
-        <div className={`
-                ${webXL && "h-[640px]"}
-                w-[540px]
-                h-[308px]
-                flex
-                flex-col
-                items-center
-                justify-center
-                rounded-[15px]
-                text-4xl
-                text-white
-                cursor-pointer
-            `}
-        >
-            <h1 className="z-50">
-                {web && "WEB DESIGN"}
-                {webXL && "WEB DESIGN"}
-                {app && "APP DESIGN"}
-                {graphic && "GRAPHIC DESIGN"}
-            </h1>
-            <div className="flex items-center mt-8 z-50">
-                <p className="text-xl hover:underline">
-                    VIEW PROJECTS
-                </p>
-                <Image 
-                    width={20}
-                    height={20}
-                    alt="right-arrow"
-                    src="/assets/right-arrow.svg"
-                    className="w-[22px] h-[22px] pl-3"
-                />
-            </div>
-            <Image 
-                width={540}
-                height={308}
-                alt="card-image"
-                src={`/assets/home/image-${srcImg}.jpg`}
-                className={`
-                    absolute
-                    z-[-1]
+        <section className="flex justify-center mx-[30px]">
+            <section className={`
+                    flex
+                    flex-col
+                    items-center
+                    justify-center
+                    xl:w-[540px]
+                    sm:w-[690px]
+                    w-[330px]
+                    xl:h-[308px]
+                    sm:h-[200px]
+                    h-[250px]
                     rounded-[15px]
-                    hover:bg-light-peach
-                    hover:opacity-80
-                    object-cover
+                    cursor-pointer
+                    relative
+                    ${webXL && "xl:h-[640px]"}
                 `}
-            />
-            <div 
-                className={`
-                        ${webXL ? "h-[640px]" : "h-[308px]"}
-                        w-[540px]
+            >
+                {/* Texts */}
+                <div className="
+                        flex
+                        flex-col
+                        items-center
+                        text-white
+                    "
+                >
+                    <h1 className="sm:text-4xl small-mobile:text-3xl z-50">
+                        {web && "WEB DESIGN"}
+                        {webXL && "WEB DESIGN"}
+                        {app && "APP DESIGN"}
+                        {graphic && "GRAPHIC DESIGN"}
+                    </h1>
+                    <div className="flex items-center sm:mt-8 mt-4 z-50">
+                        <p className="
+                                sm:text-xl
+                                small-mobile:text-base
+                                text-xs
+                                small-mobile:tracking-[5px]
+                                hover:underline
+                            "
+                        >
+                            VIEW PROJECTS
+                        </p>
+                        <Image 
+                            width={20}
+                            height={20}
+                            alt="right-arrow"
+                            src="/assets/right-arrow.svg"
+                            className="w-[22px] h-[22px] pl-3"
+                        />
+                    </div>
+                </div>
+
+                {/* Backgrounds */}
+                <div className="
+                        w-full
+                        h-full
                         absolute
-                        bg-[#000000]
                         rounded-[15px]
-                        opacity-60
-                        z-40
+                        bg-black
+                        opacity-50
+                        z-10
                         duration-300
                         hover:bg-light-peach
-                        hover:opacity-80
-                    `
-                }
-            />
-        </div>
+                        hover:opacity-60
+                    "
+                />
+                <Image 
+                    width={540}
+                    height={308}
+                    alt="card-image"
+                    src={`/assets/home/image-${srcImg}.jpg`}
+                    className={`
+                        absolute
+                        rounded-[15px]
+                        object-cover
+                        col-start-1
+                        row-start-1
+                        max-xl:w-[690px]
+                        max-xl:h-full
+                    `}
+                />
+            </section>
+        </section>
     )
 }
 

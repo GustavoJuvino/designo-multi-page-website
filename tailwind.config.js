@@ -15,7 +15,8 @@ module.exports = {
         "light-grey": "#F1F3F5"
       },
       screens: {
-        "mobile": "500px"
+        "mobile": "500px",
+        "small-mobile": "280px"
       },
       fontSize: {
         base: ["1rem", {
