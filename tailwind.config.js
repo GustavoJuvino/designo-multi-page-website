@@ -16,7 +16,7 @@ module.exports = {
       },
       screens: {
         "mobile": "500px",
-        "small-mobile": "280px"
+        "small-mobile": "282px"
       },
       fontSize: {
         base: ["1rem", {

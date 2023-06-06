@@ -26,8 +26,6 @@ const Projects: React.FC<ProjectsProps> = ({
         else setActiveBG(false)
     }
     
-
-
     if(web) srcImg = "web-design-small"
     else if(webXL) srcImg = "web-design-large"
     else if(app) srcImg = "app-design"
@@ -63,7 +61,13 @@ const Projects: React.FC<ProjectsProps> = ({
                         text-white
                     "
                 >
-                    <h1 className="sm:text-4xl small-mobile:text-3xl z-50">
+                    <h1 className="
+                            sm:text-4xl
+                            small-mobile:text-3xl
+                            text-lg
+                            z-50
+                        "
+                    >
                         {web && "WEB DESIGN"}
                         {webXL && "WEB DESIGN"}
                         {app && "APP DESIGN"}

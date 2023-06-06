@@ -1,4 +1,5 @@
 import HomeContainer from "./components/Home/HomeContainer";
+import IconsHome from "./components/Home/IconsHome";
 import Projects from "./components/Projects";
 
 export default function Home() {
@@ -26,6 +27,9 @@ export default function Home() {
           <Projects graphic={true} />
         </div>
       </section>
+
+      {/* Icons */}
+      <IconsHome />
     </main>
   )
 };
