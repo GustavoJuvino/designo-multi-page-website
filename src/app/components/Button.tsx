@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface ButtonProps {
-    value: string;
-    type: string;
+  value: string;
+  type: string;
 }
 
 const Button: React.FC<ButtonProps> = ({

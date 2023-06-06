@@ -1,3 +1,4 @@
+import Footer from "./components/Footer/Footer";
 import HomeContainer from "./components/Home/HomeContainer";
 import IconsHome from "./components/Home/IconsHome";
 import Projects from "./components/Projects";
@@ -28,8 +29,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Icons */}
       <IconsHome />
+      <Footer card={true} />
     </main>
   )
 };
