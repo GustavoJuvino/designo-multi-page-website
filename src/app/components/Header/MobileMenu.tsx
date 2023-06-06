@@ -26,18 +26,20 @@ const MobileMenu = () => {
           flex
           flex-col
           justify-between
-          w-screen
+          w-full
           h-60
           bg-black
           mt-8
           py-12
           pl-6
           duration-500
+          z-[100]
         ` 
       : ""}
     >
       {active ? headerItems.map((item) => (
-        <li className="
+        <li  key={item} 
+          className="
             text-2xl
             text-white
             w-max
@@ -50,7 +52,21 @@ const MobileMenu = () => {
           {item.toUpperCase()}
         </li>
       )) : ""}
-    </ul>
+      </ul>
+
+      {/* Background */}
+      <div
+        className={active ? `
+          absolute
+          w-full
+          h-full
+          bg-black
+          opacity-50
+          z-[90]
+          left-0
+          top-[10%]
+        ` : ""}
+      />
     </section>
   )
 }

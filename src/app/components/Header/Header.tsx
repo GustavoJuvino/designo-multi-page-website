@@ -31,7 +31,8 @@ const Header = () => {
         </div>
         <ul className="flex md:text-base text-sm text-black">
             {headerItems.map((item) => (
-                <li className="
+                <li key={item}
+                    className="
                         lg:px-11
                         md:px-7
                         px-4
