@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import React from 'react';
+import React, { MouseEvent, useState } from 'react';
 
 interface ProjectsProps {
     web?: boolean;
@@ -16,6 +18,15 @@ const Projects: React.FC<ProjectsProps> = ({
     graphic,
     webXL
 }) => {
+    const [activeBG, setActiveBG] = useState(false);
+
+    const handleMouseEvent = (e: MouseEvent<HTMLDivElement>) => {
+        e.preventDefault();
+        if(e.type === "mouseover") setActiveBG(true)
+        else setActiveBG(false)
+    }
+    
+
 
     if(web) srcImg = "web-design-small"
     else if(webXL) srcImg = "web-design-large"
@@ -42,7 +53,10 @@ const Projects: React.FC<ProjectsProps> = ({
                 `}
             >
                 {/* Texts */}
-                <div className="
+                <div 
+                    onMouseOver={handleMouseEvent}
+                    onMouseLeave={handleMouseEvent}
+                    className="
                         flex
                         flex-col
                         items-center
@@ -77,7 +91,7 @@ const Projects: React.FC<ProjectsProps> = ({
                 </div>
 
                 {/* Backgrounds */}
-                <div className="
+                <div className={`
                         w-full
                         h-full
                         absolute
@@ -85,10 +99,10 @@ const Projects: React.FC<ProjectsProps> = ({
                         bg-black
                         opacity-50
                         z-10
-                        duration-300
+                        duration-500
                         hover:bg-light-peach
-                        hover:opacity-60
-                    "
+                        ${activeBG && "bg-light-peach"}
+                    `} 
                 />
                 <Image 
                     width={540}
