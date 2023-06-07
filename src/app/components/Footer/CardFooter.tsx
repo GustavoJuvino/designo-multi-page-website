@@ -9,10 +9,11 @@ const CardFooter = () => {
         absolute
         top-[0px]
         z-50
-        sm:w-[55%]
+        lg:w-[55%]
+        sm:w-[65%]
         lg:h-[290px]
         w-auto
-        h-auto
+        h-[380px]
         bg-peach
         rounded-[15px]
         flex

@@ -25,22 +25,26 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
       
       <section className="
           w-full
-          h-[25rem]
-          mt-[12.5rem]
+          sm:h-[25rem]
+          lg:mt-[12.5rem]
+          sm:mt-[18.75rem]
+          mt-[364px]
           bg-black
           flex
-          flex-col
           justify-center
           items-center
+          max-sm:text-center
         "
       >
-        <section className="w-[55%]">
+        <section className="xl:w-[55%] w-[100%] max-xl:px-6">
           <div className="
               flex
+              max-sm:flex-col
+              items-center
               justify-between
               mt-[72px]
               pb-10
-              border-b-[1px]
+              sm:border-b-[1px]
               border-white
               border-opacity-10
             "
@@ -51,15 +55,19 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
                 height={27}
                 alt="Dark-Logo"
                 src="/assets/logo-light.png"
+                className="max-lg:w-[150px] max-sm:w-auto max-sm:mb-8"
               />
             </div>
 
+            <hr className="sm:hidden w-full h-[1px] opacity-10"/>
+
             <ul className="
-                flex
+                sm:flex
                 justify-between
                 text-white
                 tracking-[2px]
-                w-[370px]
+                sm:w-[370px]
+                max-sm:mt-8
               "
             >
               {footerItems.map((item) => (
@@ -68,6 +76,7 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
                     hover:border-b-[1px]
                     border-white
                     border-opacity-10
+                    max-sm:mt-8
                   "
                 >
                   {item.toUpperCase()}
@@ -76,22 +85,33 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
             </ul>
           </div>
 
-          <div className="flex justify-between mt-8">
-            <div className="grid grid-cols-2 gap-[100px]">
-              <div className="text-white opacity-50">
+          <div className="
+              flex
+              max-sm:flex-col
+              max-sm:items-center
+              justify-between 
+              mt-8
+            "
+          >
+            <div className="sm:flex justify-between sm:w-[440px]">
+              <div className="text-white opacity-50 max-sm:mb-8">
                 <h3>Designo Central Office</h3>
                 <p>3886 Welligton Street</p>
                 <p>Toronto, Ontario M9C 3J5</p>
               </div>
 
-              <div className="text-white opacity-50">
+              <div className="text-white opacity-50 mx-4 max-sm:mb-8">
                 <h3>Contact Us (Central Office)</h3>
-                <h3>P : +1 253-863-8967</h3>
-                <h3>M : contact@designo.co</h3>
+                <h3 className="max-sm:font-normal">
+                  P : +1 253-863-8967
+                </h3>
+                <h3 className="max-sm:font-normal">
+                  M : contact@designo.co
+                </h3>
               </div>
             </div>
 
-            <ul className="flex justify-between w-[184px]">
+            <ul className="flex justify-between w-[184px] max-sm:mb-16">
                 {socialMedias.map((item) => (
                   <li>
                     <Image 
