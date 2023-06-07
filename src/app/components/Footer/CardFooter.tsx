@@ -21,7 +21,7 @@ const CardFooter = () => {
         justify-center
         items-center
         max-lg:text-center
-        lg:px-28
+        lg:px-[4%]
         lg:mx-8
         sm:mx-10
         mx-6

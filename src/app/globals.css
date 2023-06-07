@@ -20,6 +20,10 @@ p {
   margin: 0px;
 }
 
+h1, h2, h3 {
+  font-weight: bold;
+}
+
 ul, li{
   list-style: none;
   padding: 0px;
