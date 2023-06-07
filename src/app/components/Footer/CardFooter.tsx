@@ -4,9 +4,12 @@ import Image from "next/image";
 
 const CardFooter = () => {
   return (
-    <section className="flex justify-center mt-[160px]">
+    <section className="flex justify-center">
       <div className="
-        sm:w-[1200px]
+        absolute
+        top-[0px]
+        z-50
+        sm:w-[55%]
         lg:h-[290px]
         w-auto
         h-auto
@@ -17,7 +20,6 @@ const CardFooter = () => {
         sm:justify-between
         justify-center
         items-center
-        relative
         max-lg:text-center
         lg:px-28
         lg:mx-8

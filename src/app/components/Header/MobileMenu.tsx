@@ -32,7 +32,6 @@ const MobileMenu = () => {
           mt-8
           py-12
           pl-6
-          duration-500
           z-[100]
         ` 
       : ""}
@@ -64,7 +63,7 @@ const MobileMenu = () => {
           opacity-50
           z-[90]
           left-0
-          top-[10%]
+          top-[5%]
         ` : ""}
       />
     </section>
