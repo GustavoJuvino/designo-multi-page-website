@@ -72,7 +72,9 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
               "
             >
               {footerItems.map((item) => (
-                <li className="
+                <li
+                  key={item} 
+                  className="
                     cursor-pointer
                     hover:border-b-[1px]
                     border-white

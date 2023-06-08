@@ -37,7 +37,8 @@ const MobileMenu = () => {
       : ""}
     >
       {active ? headerItems.map((item) => (
-        <li  key={item} 
+        <li  
+          key={item} 
           className="
             text-2xl
             text-white

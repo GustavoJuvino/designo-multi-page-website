@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Footer from "./components/Footer/Footer";
 import HomeContainer from "./components/Home/HomeContainer";
 import IconsHome from "./components/Home/IconsHome";
@@ -7,6 +8,19 @@ export default function Home() {
   return (
     <main>
       <HomeContainer />
+
+    <Image 
+      width={1006}
+      height={594}
+      alt="leaf-background"
+      src="/assets/home/bg-pattern-leaf.svg"
+      className="
+        absolute
+        top-[28rem
+        z-[-1]
+        max-lg:hidden
+      "
+    />
 
       {/* Projects */}
       <section className="flex justify-center xl:mt-[160px]">
@@ -28,8 +42,25 @@ export default function Home() {
           <Projects graphic={true} />
         </div>
       </section>
+      
+      <section className="relative">
+        <Image 
+            width={1006}
+            height={594}
+            alt="leaf-background"
+            src="/assets/home/bg-pattern-leaf.svg"
+            className="
+              absolute
+              right-0
+              top-[8rem]
+              z-[-1]
+              rotate-180
+              max-lg:hidden
+            "
+          />
+        <IconsHome />
+      </section>
 
-      <IconsHome />
       <Footer card={true} />
     </main>
   )

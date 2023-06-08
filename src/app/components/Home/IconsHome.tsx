@@ -38,7 +38,9 @@ const IconsHome = () => {
       "
     >
       {iconsData.map((data) => (
-        <div className="
+        <div 
+          key={data.title}
+          className="
             lg:w-[350px]
             lg:h-[412px]
             sm:h-[202px]
@@ -53,6 +55,13 @@ const IconsHome = () => {
             max-sm:mb-20
           "
         >
+          <Image 
+            width={202}
+            height={202}
+            alt="Background-Icon"
+            src="/assets/home/bg-pattern-hero-home.svg"
+            className="absolute z-[-1]"
+          />
           <Image 
             width={202}
             height={202}
