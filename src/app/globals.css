@@ -35,3 +35,14 @@ ul, li{
     display: none;
   }
 }
+
+
+#social-media {
+  fill: #E7816B;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#social-media:hover {
+  fill: #FFAD9B;
+}

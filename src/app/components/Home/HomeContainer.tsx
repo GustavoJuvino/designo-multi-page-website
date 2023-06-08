@@ -62,6 +62,7 @@ const HomeContainer = () => {
         <Image
           width={500}
           height={500}
+          priority
           alt="background-img"
           src="/assets/home/bg-pattern-hero-home.svg"
           className="

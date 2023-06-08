@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 import CardFooter from "./CardFooter";
+import { Facebook, Instagram, Pinterest, Twitter, Youtube } from "../../../../public/assets/svgs";
 
 interface FooterProps { "card": boolean }
 
@@ -111,18 +112,19 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
               </div>
             </div>
 
-            <ul className="flex justify-between w-[184px] max-sm:mb-16">
-                {socialMedias.map((item) => (
-                  <li>
-                    <Image 
-                      width={24}
-                      height={24}
-                      alt={item}
-                      src={`/assets/footer/icon-${item}.svg`}
-                    />
-                  </li>
-                ))}
-            </ul>
+            <div className="
+                flex
+                justify-between
+                w-[184px]
+                max-sm:mb-16
+              "
+            >
+                <Facebook id="social-media" />
+                <Youtube id="social-media" />
+                <Twitter id="social-media" />
+                <Pinterest id="social-media" />
+                <Instagram  id="social-media" />
+            </div>
           </div>
         </section>
       </section>

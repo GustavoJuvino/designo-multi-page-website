@@ -31,7 +31,7 @@ const CardFooter = () => {
       "
       >
         <div className="text-white  max-lg:mt-14">
-          <h1 className="small-mobile:text-4xl text-2xl z-50">
+          <h1 className="mobile:text-4xl small-mobile:text-3xl text-xl z-50">
             Let's talk about <br />
             your project
           </h1>
