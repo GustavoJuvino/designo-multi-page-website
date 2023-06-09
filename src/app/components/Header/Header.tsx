@@ -17,7 +17,7 @@ const Header = () => {
             mt-16
             xl:px-[165px]
             sm:px-9
-            px-2
+            px-6
         "
     >
         <div>

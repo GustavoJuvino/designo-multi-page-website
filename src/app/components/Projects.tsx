@@ -44,7 +44,7 @@ const Projects: React.FC<ProjectsProps> = ({
                     xl:h-[308px]
                     sm:h-[200px]
                     h-[250px]
-                    rounded-[15px]
+                    rounded-2xl
                     cursor-pointer
                     relative
                     ${webXL && "xl:h-[640px]"}
@@ -99,7 +99,7 @@ const Projects: React.FC<ProjectsProps> = ({
                         w-full
                         h-full
                         absolute
-                        rounded-[15px]
+                        rounded-2xl
                         bg-black
                         opacity-50
                         z-10
@@ -115,7 +115,7 @@ const Projects: React.FC<ProjectsProps> = ({
                     src={`/assets/home/image-${srcImg}.jpg`}
                     className={`
                         absolute
-                        rounded-[15px]
+                        rounded-2xl
                         object-cover
                         col-start-1
                         row-start-1

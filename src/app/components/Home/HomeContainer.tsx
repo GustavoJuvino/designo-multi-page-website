@@ -13,7 +13,7 @@ const HomeContainer = () => {
       <section className="
           w-[100%] 
           sm:h-[44rem]
-          mobile:h-[43.75rem]
+          mobile:h-[45rem]
           h-[42rem]
           flex
           max-lg:flex-col

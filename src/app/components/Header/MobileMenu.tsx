@@ -59,6 +59,7 @@ const MobileMenu = () => {
         className={active ? `
           absolute
           bottom-0
+          top-16
           w-full
           h-[98%]
           bg-black

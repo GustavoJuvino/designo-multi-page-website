@@ -15,7 +15,7 @@ const CardFooter = () => {
         w-auto
         h-[380px]
         bg-peach
-        rounded-[15px]
+        rounded-2xl
         flex
         max-lg:flex-col
         sm:justify-between
