@@ -29,9 +29,12 @@ const cardsData = [
   }
 ]
 
+// xl:px-[165px]
+// sm:px-9
+
 const WebDesign = () => {
   return (
-    <div>
+    <section className="xl:mx-[165px] sm:mx-9">
       <Container 
           design="web"
           title="Web Design"
@@ -41,16 +44,25 @@ const WebDesign = () => {
           "
       />
 
-      <section className="grid grid-cols-3">
+      <div className="
+          w-[100%]
+          lg:mt-[160px]
+          mt-[120px]
+          lg:grid
+          2xl:grid-cols-[5fr_5fr_1fr]
+          lg:grid-cols-[8fr_1fr]
+        "
+      >
         {cardsData.map((data) => (
           <Cards 
+            key={data.cardTitle}
             title={data.cardTitle}
             text={data.cardText}
             imgSrc="web-design"
           />
-        ))}
-      </section>
-    </div>
+        ))}  
+      </div>
+    </section>
   )
 }
 

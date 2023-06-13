@@ -22,8 +22,6 @@ const Container: React.FC<ContainerProps> = ({
         justify-center
         sm:mt-16
         mt-8
-        xl:px-[165px]
-        sm:px-9
       "
     >
       <div className="

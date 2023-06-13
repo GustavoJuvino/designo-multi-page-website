@@ -58,14 +58,13 @@ const MobileMenu = () => {
       <div
         className={active ? `
           absolute
+          left-0
           bottom-0
-          top-16
           w-full
           h-[98%]
           bg-black
           opacity-50
           z-[90]
-          left-0
         ` : ""}
       />
     </section>
