@@ -52,10 +52,12 @@ const HomeContainer = () => {
             brand experiences. Find out more about our services.
           </p>
           <div className="mt-10">
-            <Button 
-                value="LEARN MORE"
-                type="light"
-            />
+            <a href="#projects">
+              <Button 
+                  value="LEARN MORE"
+                  type="light"
+              />
+            </a>
           </div>
         </div>
 

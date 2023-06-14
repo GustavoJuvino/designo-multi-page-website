@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from 'react';
 import MobileMenu from "./MobileMenu";
+import Link from "next/link";
 
 export const headerItems = [
     "Our company",
@@ -20,15 +21,15 @@ const Header = () => {
             px-6
         "
     >
-        <div>
+        <Link href="/">
             <Image 
                 width={195}
                 height={24}
                 alt="Logo"
                 src={"/assets/logo.png"}
-                className="max-mobile:w-36"
+                className="max-mobile:w-36 cursor-pointer"
             />
-        </div>
+        </Link>
         <ul className="flex md:text-base text-sm text-black">
             {headerItems.map((item) => (
                 <li 

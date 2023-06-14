@@ -1,7 +1,14 @@
 import React from 'react'
 import Image from "next/image";
+import Link from "next/link";
 import CardFooter from "./CardFooter";
-import { Facebook, Instagram, Pinterest, Twitter, Youtube } from "../../../../public/assets/svgs";
+import { 
+  Facebook,
+  Instagram,
+  Pinterest,
+  Twitter,
+  Youtube 
+} from "../../../../public/assets/svgs";
 
 interface FooterProps { "card": boolean }
 
@@ -50,15 +57,15 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
               border-opacity-10
             "
           >
-            <div>
+            <Link href="/">
               <Image
                 width={202}
                 height={27}
                 alt="Dark-Logo"
                 src="/assets/logo-light.png"
-                className="max-lg:w-[150px] max-sm:w-auto max-sm:mb-8"
+                className="max-lg:w-[150px] max-sm:w-auto max-sm:mb-8 cursor-pointer"
               />
-            </div>
+            </Link>
 
             <hr className="sm:hidden w-full h-[1px] opacity-10"/>
 

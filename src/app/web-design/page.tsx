@@ -1,6 +1,9 @@
 import React from 'react';
+import Link from "next/link";
 import Container from "../components/Container";
 import Cards from "../components/Cards";
+import Projects from "../components/Projects";
+import Footer from "../components/Footer/Footer";
 
 const cardsData = [
   {
@@ -31,34 +34,47 @@ const cardsData = [
 
 const WebDesign = () => {
   return (
-    <section className="xl:mx-[165px] sm:mx-9">
-      <Container 
-          design="web"
-          title="Web Design"
-          text="
-            We build websites that serve as powerful marketing tools 
-            and bring memorable brand experiences.
-          "
-      />
+    <section>
+      <section className="xl:mx-[165px] sm:mx-9">
+        <Container 
+            design="web"
+            title="Web Design"
+            text="
+              We build websites that serve as powerful marketing tools 
+              and bring memorable brand experiences.
+            "
+        />
 
-      <div className="
-          w-[100%]
-          lg:mt-[160px]
-          mt-[120px]
-          lg:grid
-          2xl:grid-cols-[5fr_5fr_1fr]
-          lg:grid-cols-[8fr_1fr]
-        "
-      >
-        {cardsData.map((data) => (
-          <Cards 
-            key={data.cardTitle}
-            title={data.cardTitle}
-            text={data.cardText}
-            imgSrc="web-design"
-          />
-        ))}  
-      </div>
+        <div className="
+            w-[100%]
+            lg:mt-[160px]
+            mt-[120px]
+            lg:grid
+            2xl:grid-cols-[5fr_5fr_1fr]
+            lg:grid-cols-[8fr_1fr]
+          "
+        >
+          {cardsData.map((data) => (
+            <Cards 
+              key={data.cardTitle}
+              title={data.cardTitle}
+              text={data.cardText}
+              imgSrc="web-design"
+            />
+          ))}  
+        </div>
+
+        <div className="flex max-xl:flex-col justify-center mt-[160px]">
+          <Link href="app-design">
+            <Projects app={true} />
+          </Link>
+
+          <Link href="graphic-design" className="mt-6">
+            <Projects graphic={true} />
+          </Link>
+        </div>
+      </section>
+      <Footer card={true} />
     </section>
   )
 }

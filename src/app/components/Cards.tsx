@@ -31,7 +31,6 @@ const Cards: React.FC<CardsProps> = ({
             w-full
             h-auto
             mt-8
-
         "
     >
         <div className="
@@ -52,6 +51,11 @@ const Cards: React.FC<CardsProps> = ({
                         w-[400px]
                         h-auto
                         object-cover
+                        lg:rounded-t-2xl
+                        sm:rounded-tr-none
+                        rounded-t-2xl
+                        max-lg:rounded-l-2xl
+                        max-sm:rounded-b-none
                     "
                 />
             </div>
@@ -66,12 +70,15 @@ const Cards: React.FC<CardsProps> = ({
                     w-auto
                     lg:h-[156px]
                     max-sm:h-[156px]
-                    bg-white-peach
                     flex
                     flex-col
                     items-center
                     justify-center
                     text-center
+                    bg-white-peach
+                    lg:rounded-b-2xl
+                    sm:rounded-r-2xl
+                    max-sm:rounded-b-2xl
                     cursor-pointer
                     duration-300
                     hover:bg-peach
