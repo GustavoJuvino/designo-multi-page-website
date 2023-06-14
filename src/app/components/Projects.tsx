@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import React, { MouseEvent, useState } from 'react';
+import Image from "next/image";
 
 interface ProjectsProps {
     web?: boolean;

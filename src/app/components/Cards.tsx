@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+
+import React, { MouseEvent, useState } from 'react';
 import Image from "next/image";
 
 interface CardsProps {
@@ -12,62 +14,79 @@ const Cards: React.FC<CardsProps> = ({
     text,
     imgSrc
 }) => {
+  const [activeHover, setActiveHover] = useState(false);
+
+  const handleMouseEvent = (e: MouseEvent<HTMLDivElement>) => {
+        e.preventDefault();
+        if(e.type === "mouseover") setActiveHover(true)
+        else setActiveHover(false)
+    }
+
+
   return (
-    <div className="
-           lg:bg-white-peach
-            flex
-            lg:flex-col
-            max-sm:flex-col
-            lg:w-[350px]
-            w-full
-            lg:h-[478px]
-            h-auto
-            rounded-2xl
-            mt-8
+    <section className="
+            max-sm:flex
             items-center
-            text-center
+            justify-center
+            w-full
+            h-auto
+            mt-8
+
         "
     >
-        <div>
-            <Image 
-                width={350}
-                height={320}
-                alt="card-image"
-                src={`/assets/${imgSrc}/image-${title}.jpg`}
-                className="
-                    lg:rounded-2xl
-                    sm:rounded-l-2xl
-                    max-sm:rounded-2xl
-                    w-full
-                    h-[320px]
-                    object-cover
-                "
-            />
-       </div>
-            
         <div className="
                 flex
-                flex-col
-                justify-center
-                items-center
-                text-center
-                my-8
-                max-lg:bg-white-peach
-                max-sm:bg-transparent
-                max-lg:w-[60%]
-                max-lg:h-[320px]
-                max-sm:h-auto
-                max-lg:rounded-r-2xl
+                lg:flex-col
+                max-sm:flex-col
+                lg:w-[350px]
+                max-sm:w-[350px]
             "
         >
-            <h1 className="text-xl text-peach">
-                {title.toUpperCase()}
-            </h1>
-            <p className="lg:w-[80%] sm:w-[44%] w-[80%] mt-4">
-                {text}
-            </p>
+            <div>
+                <Image 
+                    width={350}
+                    height={320}
+                    alt="card-image"
+                    src={`/assets/${imgSrc}/image-${title}.jpg`}
+                    className="
+                        w-[400px]
+                        h-auto
+                        object-cover
+                    "
+                />
+            </div>
+
+            {/* Texts */}
+            <div 
+                onMouseOver={handleMouseEvent}
+                onMouseLeave={handleMouseEvent}
+                className="
+                    lg:w-full
+                    sm:w-[60%]
+                    w-auto
+                    lg:h-[156px]
+                    max-sm:h-[156px]
+                    bg-white-peach
+                    flex
+                    flex-col
+                    items-center
+                    justify-center
+                    text-center
+                    cursor-pointer
+                    duration-300
+                    hover:bg-peach
+                    hover:text-white
+                "
+            >
+                    <h1 className={`text-xl ${activeHover ? "text-white" : "text-peach"}`}>
+                        {title.toUpperCase()}
+                    </h1>
+                    <p className="lg:w-[80%] sm:w-[44%] w-[80%] mt-4">
+                        {text}
+                    </p>
+            </div>
         </div>
-    </div>
+    </section>
   )
 }
 

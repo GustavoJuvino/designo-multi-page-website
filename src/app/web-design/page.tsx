@@ -29,9 +29,6 @@ const cardsData = [
   }
 ]
 
-// xl:px-[165px]
-// sm:px-9
-
 const WebDesign = () => {
   return (
     <section className="xl:mx-[165px] sm:mx-9">
