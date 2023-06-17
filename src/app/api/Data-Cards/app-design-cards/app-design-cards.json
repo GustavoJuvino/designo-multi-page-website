@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Airfilter",
+        "text": "Solving the problem of poor indoor air quality by filtering the airs",
+        "src": "/assets/app-design/image-airfilter.jpg"
+    },
+    {
+        "title": "Eyecam",
+        "text": "Product that lets you edit your favorite photos and videos at any time",
+        "src": "/assets/app-design/image-eyecam.jpg"
+    },
+    {
+        "title": "Faceit",
+        "text": "Get to meet your favorite internet superstar with the faceit app",
+        "src": "/assets/app-design/image-faceit.jpg"
+    },
+    {
+        "title": "Todo",
+        "text": "A todo app that features cloud sync with light and dark mode",
+        "src": "/assets/app-design/image-todo.jpg"
+    },
+    {
+        "title": "Loopstudios",
+        "text": "A VR experience app made for Loopstudios",
+        "src": "/assets/app-design/image-loopstudios.jpg"
+    }
+]

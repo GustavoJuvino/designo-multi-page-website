@@ -4,7 +4,7 @@ import Image from "next/image";
 type Design = "web" | "app" | "graphic"
 
 interface ContainerProps {
-  title: string;
+  title: string | undefined;
   text: string;
   design: Design
 }

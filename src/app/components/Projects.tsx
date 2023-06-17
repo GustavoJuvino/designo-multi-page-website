@@ -2,12 +2,14 @@
 
 import React, { MouseEvent, useState } from 'react';
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectsProps {
     web?: boolean;
     app?: boolean;
     graphic?: boolean;
-    webXL?: boolean
+    webXL?: boolean;
+    href: string;
 }
 
 let srcImg = "";
@@ -16,7 +18,8 @@ const Projects: React.FC<ProjectsProps> = ({
     web,
     app,
     graphic,
-    webXL
+    webXL,
+    href
 }) => {
     const [activeBG, setActiveBG] = useState(false);
 
@@ -74,7 +77,9 @@ const Projects: React.FC<ProjectsProps> = ({
                         {graphic && "GRAPHIC DESIGN"}
                     </h1>
                     <div className="flex items-center sm:mt-8 mt-4 z-50">
-                        <p className="
+                        <Link 
+                            href={`/projects/${href}-design`}
+                            className="
                                 sm:text-xl
                                 small-mobile:text-base
                                 text-xs
@@ -83,7 +88,7 @@ const Projects: React.FC<ProjectsProps> = ({
                             "
                         >
                             VIEW PROJECTS
-                        </p>
+                        </Link>
                         <Image 
                             width={20}
                             height={20}

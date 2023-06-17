@@ -6,13 +6,13 @@ import Image from "next/image";
 interface CardsProps {
     title: string;
     text: string;
-    imgSrc: string;
+    src: string;
 }
 
 const Cards: React.FC<CardsProps> = ({
     title,
     text,
-    imgSrc
+    src
 }) => {
   const [activeHover, setActiveHover] = useState(false);
 
@@ -46,7 +46,7 @@ const Cards: React.FC<CardsProps> = ({
                     width={350}
                     height={320}
                     alt="card-image"
-                    src={`/assets/${imgSrc}/image-${title}.jpg`}
+                    src={src}
                     className="
                         w-[400px]
                         h-auto

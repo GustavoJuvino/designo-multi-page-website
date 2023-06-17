@@ -25,9 +25,9 @@ export default function Home() {
 
       {/* Projects */}
       <section id="projects" className="flex justify-center xl:mt-[160px]">
-        <Link href="web-design" className="max-xl:hidden">
-          <Projects webXL={true} />
-        </Link>
+        <div className="max-xl:hidden">
+          <Projects webXL={true} href="web" />
+        </div>
         <div className="
             grid
             grid-cols-1
@@ -36,15 +36,11 @@ export default function Home() {
             xl:ml-8
           "
         >
-          <Link href="web-design" className="xl:hidden">
-            <Projects web={true} />
-          </Link>
-          <Link href="app-design">
-            <Projects app={true} />
-          </Link>
-          <Link href="graphic-design">
-            <Projects graphic={true} />
-          </Link>
+          <div className="xl:hidden">
+            <Projects web={true} href="web" />
+          </div>
+            <Projects app={true} href="app" />
+            <Projects graphic={true} href="graphic" />
         </div>
       </section>
       
