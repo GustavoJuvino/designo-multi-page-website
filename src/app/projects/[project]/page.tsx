@@ -63,12 +63,18 @@ export default async function page({params} : {params: {project: string}}) {
             ))}  
           </div>
         
-          <div className="flex max-xl:flex-col justify-center mt-[160px]">
-            <Projects app={true} href="app"  />
-            <div className="max-xl:mt-8">
-              <Projects graphic={true} href="graphic" />
-            </div>
+          <div className="
+              flex
+              max-xl:flex-col
+              justify-center
+              mt-[160px]
+            "
+          >
+            {designs.map((design) => (
+              <Projects type={design === project ? null : design} />
+            ))}
           </div>
+
         </section>
         <Footer card={true} />
       </section>
@@ -77,6 +83,7 @@ export default async function page({params} : {params: {project: string}}) {
     return (
       <section>
         <h1>Page Not Founded</h1>
+        <Footer card={false} />
       </section>
     )
   }
