@@ -4,6 +4,7 @@ import Footer from "@/app/components/Footer/Footer";
 import Projects from "@/app/components/Projects";
 import getData from "@/app/helper/getData";
 import Cards from "@/app/components/Cards";
+import Link from "next/link";
 
 const designs = ["web-design", "app-design", "graphic-design"] as const;
 type Design = (typeof designs)[number];
@@ -82,8 +83,32 @@ export default async function page({params} : {params: {project: string}}) {
   } else {
     return (
       <section>
-        <h1>Page Not Founded</h1>
-        <Footer card={false} />
+        <div className="            
+            xl:px-[165px]
+            sm:px-9
+            px-6
+            flex
+            flex-col
+            items-center
+            justify-center
+            mt-[165px]
+          "
+          >
+          <h1 className="text-4xl">Page Not Founded {" :( "}</h1>
+          <Link 
+            href="/"
+            className="
+              text-2xl
+              mt-5
+              hover:underline
+            "
+          >
+            Click here to go back to the home page {" < "}
+          </Link>
+        </div>
+        <div className="pt-[0.7rem]">
+          <Footer card={false} />
+        </div>
       </section>
     )
   }
