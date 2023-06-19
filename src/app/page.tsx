@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import Footer from "./components/Footer/Footer";
 import HomeContainer from "./components/Home/HomeContainer";
 import IconsHome from "./components/Home/IconsHome";
@@ -14,7 +12,6 @@ export default function Home() {
         <LeafBackground />
       </div>
     
-
       {/* Projects */}
       <section id="projects" className="flex justify-center xl:mt-[160px]">
         <div className="max-xl:hidden">

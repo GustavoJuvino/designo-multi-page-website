@@ -1,11 +1,11 @@
 import React from 'react';
-import Container from "@/app/components/Container";
-import Footer from "@/app/components/Footer/Footer";
-import Projects from "@/app/components/Projects";
-import Cards from "@/app/components/Cards";
 import getData from "@/app/helper/getData";
 import NotFounded from "@/app/not-found";
+import Cards from "@/app/components/Cards";
+import Projects from "@/app/components/Projects";
+import Footer from "@/app/components/Footer/Footer";
 import LeafBackground from "@/app/components/LeafBackground";
+import ContainerDesign from "@/app/components/Design/Container-Design";
 
 const designs = ["web-design", "app-design", "graphic-design"] as const;
 type Design = (typeof designs)[number];
@@ -44,7 +44,7 @@ export default async function page({params} : {params: {project: string}}) {
         </div>
 
         <section className="xl:mx-[165px] sm:mx-9">
-          <Container
+          <ContainerDesign
             design="web"
             title={dataContainer.title}
             text={dataContainer.text}
