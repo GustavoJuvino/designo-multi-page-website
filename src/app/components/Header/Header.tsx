@@ -32,7 +32,8 @@ const Header = () => {
         </Link>
         <ul className="flex md:text-base text-sm text-black">
             {headerItems.map((item) => (
-                <li 
+                <Link 
+                    href={item === "Our company" ? "/About" : item}
                     key={item}
                     className="
                         lg:px-11
@@ -44,7 +45,7 @@ const Header = () => {
                     "
                 >
                     {item.toUpperCase()}
-                </li>
+                </Link>
             ))}
         </ul>
 

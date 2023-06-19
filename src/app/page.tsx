@@ -4,24 +4,16 @@ import Footer from "./components/Footer/Footer";
 import HomeContainer from "./components/Home/HomeContainer";
 import IconsHome from "./components/Home/IconsHome";
 import Projects from "./components/Projects";
+import LeafBackground from "./components/LeafBackground";
 
 export default function Home() {
   return (
     <main>
       <HomeContainer />
-
-      <Image 
-        width={1006}
-        height={594}
-        alt="leaf-background"
-        src="/assets/home/bg-pattern-leaf.svg"
-        className="
-          absolute
-          top-[28rem
-          z-[-1]
-          max-lg:hidden
-        "
-      />
+      <div className="absolute top-[28rem] z-[-1]">
+        <LeafBackground />
+      </div>
+    
 
       {/* Projects */}
       <section id="projects" className="flex justify-center xl:mt-[160px]">
@@ -45,20 +37,9 @@ export default function Home() {
       </section>
       
       <section className="relative">
-        <Image 
-            width={1006}
-            height={594}
-            alt="leaf-background"
-            src="/assets/home/bg-pattern-leaf.svg"
-            className="
-              absolute
-              right-0
-              top-[8rem]
-              z-[-1]
-              rotate-180
-              max-lg:hidden
-            "
-          />
+        <div className="absolute right-0 top-[8rem] z-[-1] rotate-180">
+          <LeafBackground />
+        </div>
         <IconsHome />
       </section>
 

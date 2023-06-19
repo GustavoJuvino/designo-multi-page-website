@@ -2,9 +2,10 @@ import React from 'react';
 import Container from "@/app/components/Container";
 import Footer from "@/app/components/Footer/Footer";
 import Projects from "@/app/components/Projects";
-import getData from "@/app/helper/getData";
 import Cards from "@/app/components/Cards";
-import Link from "next/link";
+import getData from "@/app/helper/getData";
+import NotFounded from "@/app/not-found";
+import LeafBackground from "@/app/components/LeafBackground";
 
 const designs = ["web-design", "app-design", "graphic-design"] as const;
 type Design = (typeof designs)[number];
@@ -38,6 +39,10 @@ export default async function page({params} : {params: {project: string}}) {
   if(isDesign(project)) {
     return (
       <section>
+        <div className="absolute top-[12rem] z-[-1]">
+          <LeafBackground />
+        </div>
+
         <section className="xl:mx-[165px] sm:mx-9">
           <Container
             design="web"
@@ -69,6 +74,7 @@ export default async function page({params} : {params: {project: string}}) {
               max-xl:flex-col
               justify-center
               mt-[160px]
+              [&>*:nth-child(2)]:pt-7
             "
           >
             {designs.map((design) => (
@@ -80,38 +86,6 @@ export default async function page({params} : {params: {project: string}}) {
         <Footer card={true} />
       </section>
     )
-  } else {
-    return (
-      <section>
-        <div className="            
-            xl:px-[165px]
-            sm:px-9
-            px-6
-            flex
-            flex-col
-            items-center
-            justify-center
-            mt-[165px]
-          "
-          >
-          <h1 className="text-4xl">Page Not Founded {" :( "}</h1>
-          <Link 
-            href="/"
-            className="
-              text-2xl
-              mt-5
-              hover:underline
-            "
-          >
-            Click here to go back to the home page {" < "}
-          </Link>
-        </div>
-        <div className="pt-[0.7rem]">
-          <Footer card={false} />
-        </div>
-      </section>
-    )
-  }
-  
+  } else return <NotFounded />
 }
   
