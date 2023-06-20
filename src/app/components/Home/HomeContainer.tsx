@@ -5,31 +5,39 @@ import Button from "../Button";
 const HomeContainer = () => {
   return (
     <section className="
-        xl:px-[165px]
-        sm:px-9
-        overflow-hidden
+        w-full
+        h-auto
+        flex
+        justify-center
+        sm:px-6
       "
     >
-      <section className="
-          w-[100%] 
-          sm:h-[44rem]
-          mobile:h-[45rem]
-          h-[42rem]
-          flex
-          max-lg:flex-col
-          justify-between
-          items-center
-          max-lg:text-center
-          relative
-          bg-peach
+      <div className="
+          xl:w-[1111px]
+          sm:w-[689px]
+          w-full
+          xl:h-[640px]
+          h-[843px]
+          xl:pl-24
           sm:rounded-2xl
-          mt-16
-          lg:pl-24
+          bg-peach
+          flex
+          max-xl:flex-col
+          items-center
+          relative
           overflow-hidden
         "
       >
-        {/* texts col */}
-        <div className="text-white z-20 max-lg:mt-16">
+        {/* Texts */}
+        <div className="
+            text-white
+            max-xl:text-center
+            max-xl:mt-[3.75rem]
+            max-sm:px-6
+            max-small-mobile:px-2
+            z-40
+          "
+        >
           <h1 className="
               mobile:text-5xl
               text-3xl
@@ -41,10 +49,8 @@ const HomeContainer = () => {
             branding solutions
           </h1>
           <p className="
-              text-base
               mt-9
               max-mobile:leading-[20px]
-              max-mobile:px-2
             "
           >
             With over 10 years in the industry, we are experienced <br id="br" />
@@ -53,14 +59,12 @@ const HomeContainer = () => {
           </p>
           <div className="mt-10">
             <a href="#projects">
-              <Button 
-                  value="LEARN MORE"
-                  type="light"
-              />
+                <Button value="LEARN MORE" type="light" />
             </a>
           </div>
         </div>
 
+        {/* Circle Background */}
         <Image
           width={500}
           height={500}
@@ -69,39 +73,43 @@ const HomeContainer = () => {
           src="/assets/home/bg-pattern-hero-home.svg"
           className="
             absolute
-            lg:right-0
-            sm:right-[-10%]
-            max-lg:top-24
-            max-sm:top-0
-            lg:w-auto
-            lg:h-auto
-            max-sm:w-[100%]
-            max-sm:h-[100%]
+            sm:w-auto
+            sm:h-auto
+            w-[100%]
+            h-[100%]
+            xl:right-0
+            max-xl:left-[12rem]
+            max-sm:left-0
+            max-xl:top-24
+            z-10
             max-sm:object-cover
             max-sm:object-left
           "
         />
 
+        {/* Phone Image */}
         <Image 
-          width={280}
-          height={572}
+          width={624}
+          height={913}
           alt="phone"
           src="/assets/home/image-hero-phone.png"
           className="
-            lg:mt-[250px]
-            sm:mt-[400px]
-            lg:w-[500px]
-            sm:w-[350px]
-            max-sm:w-auto
-            max-sm:h-[500px]
+            w-auto
+            mobile:h-[913px]
+            h-[843px]
+            absolute
+            xl:right-0
+            xl:top-[-2rem]
+            mobile:top-[18rem]
+            top-[20rem]
             z-20
-            sm:absolute
-            lg:right-0
+            object-cover
           "
         />
-      </section>
+      </div>
     </section>
   )
 }
 
 export default HomeContainer;
+

@@ -34,12 +34,11 @@ ul, li{
   margin: 0px;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 600px) {
   #br {
     display: none;
   }
 }
-
 
 #social-media {
   fill: #E7816B;

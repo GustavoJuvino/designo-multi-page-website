@@ -22,7 +22,6 @@ const Cards: React.FC<CardsProps> = ({
         else setActiveHover(false)
     }
 
-
   return (
     <section className="
             max-sm:flex

@@ -1,7 +1,7 @@
 import Footer from "./components/Footer/Footer";
 import HomeContainer from "./components/Home/HomeContainer";
 import IconsHome from "./components/Home/IconsHome";
-import Projects from "./components/Projects";
+import Projects from "./components/Design/Projects";
 import LeafBackground from "./components/LeafBackground";
 
 export default function Home() {

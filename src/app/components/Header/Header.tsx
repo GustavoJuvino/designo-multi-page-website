@@ -1,7 +1,7 @@
-import Image from "next/image";
 import React from 'react';
-import MobileMenu from "./MobileMenu";
+import Image from "next/image";
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 
 export const headerItems = [
     "Our company",
@@ -12,44 +12,99 @@ export const headerItems = [
 const Header = () => {
   return (
     <header className="
+            w-full
             flex
-            justify-between
-            items-center
-            mt-16
-            xl:px-[165px]
-            sm:px-9
-            px-6
+            justify-center
+            mobile:my-16
+            my-8
+            max-md:px-6
+            max-small-mobile:px-2
         "
     >
-        <Link href="/">
-            <Image 
-                width={195}
-                height={24}
-                alt="Logo"
-                src={"/assets/logo.png"}
-                className="max-mobile:w-36 cursor-pointer"
-            />
-        </Link>
-        <ul className="flex md:text-base text-sm text-black">
-            {headerItems.map((item) => (
-                <Link 
-                    href={item === "Our company" ? "/About" : item}
-                    key={item}
-                    className="
-                        lg:px-11
-                        md:px-7
-                        px-4
-                        max-sm:hidden
-                        cursor-pointer
-                        hover:underline
-                    "
-                >
-                    {item.toUpperCase()}
-                </Link>
-            ))}
-        </ul>
-
-        <MobileMenu />
+        <div className="
+                xl:w-[1111px]
+                w-[689px]
+                h-auto
+                flex
+                justify-between
+            "
+        >
+            <Link href="/">
+                <Image 
+                    width={195}
+                    height={24}
+                    alt="Logo"
+                    src={"/assets/logo.png"}
+                    className="max-mobile:w-36 cursor-pointer"
+                />
+            </Link>
+            <ul className="
+                    flex
+                    justify-between
+                    w-[370px]
+                    md:text-bas
+                    text-sm
+                    text-black
+                    max-sm:hidden
+                "
+            >
+                {headerItems.map((item) => (
+                    <li>
+                        <Link 
+                            href={item === "Our company" ? "/About" : item}
+                            key={item}
+                            className="
+                                tracking-[2px]
+                                max-sm:hidden
+                                cursor-pointer
+                                hover:underline
+                            "
+                        >
+                            {item.toUpperCase()}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+            <MobileMenu />
+        </div>
+        {/* <section className="w-auto flex justify-center">
+            <Link href="/">
+                <Image 
+                    width={195}
+                    height={24}
+                    alt="Logo"
+                    src={"/assets/logo.png"}
+                    className="max-mobile:w-36 cursor-pointer"
+                />
+            </Link>
+            <ul className="
+                    flex
+                    justify-between
+                    w-[370px]
+                    md:text-bas
+                    text-sm
+                    text-black
+                    max-sm:hidden
+                "
+            >
+                {headerItems.map((item) => (
+                    <li>
+                        <Link 
+                            href={item === "Our company" ? "/About" : item}
+                            key={item}
+                            className="
+                                max-sm:hidden
+                                cursor-pointer
+                                hover:underline
+                            "
+                        >
+                            {item.toUpperCase()}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+            <MobileMenu />
+        </section> */}
     </header>
   )
 }

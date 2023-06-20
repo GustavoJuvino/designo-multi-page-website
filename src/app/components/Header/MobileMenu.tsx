@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import styles from "./styles/MobileMenu.module.css"
 import { headerItems } from "./Header";
+import Link from "next/link";
 
 const MobileMenu = () => {
   const [active, setActive] = useState(false);
@@ -49,7 +50,9 @@ const MobileMenu = () => {
             hover:text-gray-500
           "
         >
-          {item.toUpperCase()}
+          <Link href={item === "Our company" ? "/About" : item} >
+            {item.toUpperCase()}
+          </Link>
         </li>
       )) : ""}
       </ul>
@@ -61,7 +64,8 @@ const MobileMenu = () => {
           left-0
           bottom-0
           w-full
-          h-[98%]
+          top-[4rem]
+          h-auto
           bg-black
           opacity-50
           z-[90]
