@@ -4,44 +4,44 @@ import Image from "next/image";
 
 const CardFooter = () => {
   return (
-    <section className="flex justify-center">
+    <section className="flex justify-center mt-[16rem]">
       <div className="
         absolute
-        top-[0px]
+        md:top-0
+        top-[-25%]
         z-50
-        lg:w-[55%]
-        sm:w-[65%]
-        lg:h-[290px]
-        w-auto
+        xl:w-[1111px]
+        md:w-[690px]
+        mobile:w-[327px]
+        xl:h-[290px]
+        md:h-[350px]
         h-[380px]
         bg-peach
         rounded-2xl
         flex
-        max-lg:flex-col
-        sm:justify-between
+        max-xl:flex-col
+        md:justify-between
         justify-center
         items-center
-        max-lg:text-center
-        lg:px-[4%]
-        lg:mx-8
-        sm:mx-10
-        mx-6
-        px-6
+        max-xl:text-center
+        xl:px-[4%]
+        xl:mx-8
+        md:mx-10
         overflow-hidden
       "
       >
-        <div className="text-white  max-lg:mt-14">
-          <h1 className="mobile:text-4xl small-mobile:text-3xl text-xl z-50">
+        <div className="text-white max-xl:mt-14">
+          <h1 className="text-4xl max-md:tracking-[0] max-md:leading-[36px]  z-50">
             Let's talk about <br />
             your project
           </h1>
-          <p className="mt-5 z-50 max-small-mobile:text-xs">
+          <p className="mt-5 z-50 max-md:mx-6 max-small-mobile:text-xs">
             Ready to take it to the next level? Contact us today and find out how <br id="br" />
             our expertise can help your business grow.
           </p>
         </div>
 
-        <div className="z-50 max-lg:mt-8 max-lg:mb-14">
+        <div className="z-50 max-xl:mt-8 max-xl:mb-14">
           <Button 
             value="GET IN TOUCH"
             type="light"
@@ -56,10 +56,10 @@ const CardFooter = () => {
           src="/assets/bg-pattern-call-to-action.svg"
           className="
             w-auto
-            lg:h-fit
+            xl:h-fit
             h-[600px]
             absolute
-            max-lg:top-[-80px]
+            max-xl:top-[-80px]
             z-40
             object-cover
           "

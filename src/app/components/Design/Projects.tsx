@@ -18,7 +18,7 @@ const Projects: React.FC<ProjectsProps> = ({
     }
 
     return (
-        <section className="flex justify-center mx-[30px]">
+        <section className="flex justify-center sm:px-6">
             {type ? (
                 <section 
                     className={`

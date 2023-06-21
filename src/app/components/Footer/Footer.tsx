@@ -18,41 +18,32 @@ const footerItems = [
   "contact"
 ]
 
-const socialMedias = [
-  "facebook",
-  "instagram",
-  "pinterest",
-  "twitter",
-  "youtube",
-]
-
 const Footer: React.FC<FooterProps> = ({ card }) => {
   return (
-    <footer className="relative mt-[10rem]">
+    <footer className="relative xl:mt-[10rem]">
       {card && <CardFooter/> }
       
       <section className="
           w-full
-          sm:h-[25rem]
-          lg:mt-[12.5rem]
-          sm:mt-[18.75rem]
-          mt-[364px]
+          md:h-[25rem]
+          xl:mt-[12.5rem]
+          md:mt-[18.75rem]
           bg-black
           flex
           justify-center
           items-center
-          max-sm:text-center
+          max-md:text-center
         "
       >
-        <section className="xl:w-[55%] w-[100%] max-xl:px-6">
+        <section className="xl:w-[55%] w-[100%] max-xl:px-6 mt-[10rem]" >
           <div className="
               flex
-              max-sm:flex-col
+              max-md:flex-col
               items-center
               justify-between
               mt-[72px]
               pb-10
-              sm:border-b-[1px]
+              md:border-b-[1px]
               border-white
               border-opacity-10
             "
@@ -63,19 +54,19 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
                 height={27}
                 alt="Dark-Logo"
                 src="/assets/logo-light.png"
-                className="max-lg:w-[150px] max-sm:w-auto max-sm:mb-8 cursor-pointer"
+                className="max-lg:w-[150px] max-md:w-auto max-md:mb-8 cursor-pointer"
               />
             </Link>
 
-            <hr className="sm:hidden w-full h-[1px] opacity-10"/>
+            <hr className="md:hidden w-full h-[1px] opacity-10"/>
 
             <ul className="
-                sm:flex
+                md:flex
                 justify-between
                 text-white
                 tracking-[2px]
-                sm:w-[370px]
-                max-sm:mt-8
+                md:w-[370px]
+                max-md:mt-8
               "
             >
               {footerItems.map((item) => (
@@ -86,7 +77,7 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
                     hover:border-b-[1px]
                     border-white
                     border-opacity-10
-                    max-sm:mt-8
+                    max-md:mt-8
                   "
                 >
                   {item.toUpperCase()}
@@ -97,25 +88,25 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
 
           <div className="
               flex
-              max-sm:flex-col
-              max-sm:items-center
+              max-md:flex-col
+              max-md:items-center
               justify-between 
               mt-8
             "
           >
-            <div className="sm:flex justify-between sm:w-[440px]">
-              <div className="text-white opacity-50 max-sm:mb-8">
+            <div className="md:flex justify-between md:w-[440px]">
+              <div className="text-white opacity-50 max-md:mb-8">
                 <h3>Designo Central Office</h3>
                 <p>3886 Welligton Street</p>
                 <p>Toronto, Ontario M9C 3J5</p>
               </div>
 
-              <div className="text-white opacity-50 mx-4 max-sm:mb-8">
+              <div className="text-white opacity-50 mx-4 max-md:mb-8">
                 <h3>Contact Us (Central Office)</h3>
-                <h3 className="max-sm:font-normal">
+                <h3 className="max-md:font-normal">
                   P : +1 253-863-8967
                 </h3>
-                <h3 className="max-sm:font-normal">
+                <h3 className="max-md:font-normal">
                   M : contact@designo.co
                 </h3>
               </div>

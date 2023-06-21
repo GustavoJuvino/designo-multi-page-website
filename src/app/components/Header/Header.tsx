@@ -67,44 +67,6 @@ const Header = () => {
             </ul>
             <MobileMenu />
         </div>
-        {/* <section className="w-auto flex justify-center">
-            <Link href="/">
-                <Image 
-                    width={195}
-                    height={24}
-                    alt="Logo"
-                    src={"/assets/logo.png"}
-                    className="max-mobile:w-36 cursor-pointer"
-                />
-            </Link>
-            <ul className="
-                    flex
-                    justify-between
-                    w-[370px]
-                    md:text-bas
-                    text-sm
-                    text-black
-                    max-sm:hidden
-                "
-            >
-                {headerItems.map((item) => (
-                    <li>
-                        <Link 
-                            href={item === "Our company" ? "/About" : item}
-                            key={item}
-                            className="
-                                max-sm:hidden
-                                cursor-pointer
-                                hover:underline
-                            "
-                        >
-                            {item.toUpperCase()}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-            <MobileMenu />
-        </section> */}
     </header>
   )
 }

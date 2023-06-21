@@ -78,7 +78,7 @@ export default async function page({params} : {params: {project: string}}) {
             "
           >
             {designs.map((design) => (
-              <Projects type={design === project ? null : design} />
+              <Projects key={design} type={design === project ? null : design} />
             ))}
           </div>
 

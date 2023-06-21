@@ -8,7 +8,7 @@ const LeafBackground= () => {
       height={594}
       alt="leaf-background"
       src="/assets/home/bg-pattern-leaf.svg"
-      className="max-lg:hidden"    
+      className="max-xl:hidden"    
     />
   )
 }

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React from 'react';
+import Image from "next/image";
 
 const iconsData = [
   {
@@ -31,65 +31,73 @@ const iconsData = [
 const IconsHome = () => {
   return (
     <section className="
-        lg:flex
-        lg:justify-center
+        flex
+        justify-center
         xl:mt-[10rem]
         mt-[7.5rem]
+        max-mobile:mx-6
+        max-md:mb-[120px]
       "
     >
-      {iconsData.map((data) => (
-        <div 
-          key={data.title}
-          className="
-            lg:w-[350px]
-            lg:h-[412px]
-            sm:h-[202px]
-            flex
-            lg:flex-col
-            max-sm:flex-col
-            items-center
-            lg:mx-8
-            sm:mx-10
-            mx-6
-            max-lg:mb-8
-            max-sm:mb-20
-          "
-        >
-          <Image 
-            width={202}
-            height={202}
-            alt="Background-Icon"
-            src="/assets/home/bg-pattern-hero-home.svg"
-            className="absolute z-[-1]"
-          />
-          <Image 
-            width={202}
-            height={202}
-            alt="Home-Icon"
-            src={`/assets/home/illustration-${data.title}.svg`}
-          />
-
-          {/* Texts */}
-          <div className="
-              lg:text-center
-              max-sm:text-center
-              lg:mt-12
-              max-sm:mt-12
-              max-lg:ml-12
-              max-sm:ml-0
-              max-lg:w-[27.5rem]
-              max-sm:w-[100%]
+      <div className="
+          xl:w-[1111px]
+          h-auto
+          xl:flex
+          justify-between
+        "
+      >
+        {iconsData.map((data) => (
+          <div 
+            key={data.title}
+            className="
+              xl:w-[350px]
+              md:w-[689px]
+              small-mobile:w-[327px]
+              xl:h-[412px]
+              md:h-[202px]
+              mobile:h-[412px]
+              max-xl:mb-8
+              max-md:mb-20
+              flex
+              xl:flex-col
+              max-md:flex-col
+              items-center
             "
           >
-            <h1 className="text-xl mb-8">
-              {data.title.toUpperCase()}
-            </h1>
-            <p>
-              {data.text}
-            </p>
+            <Image 
+              width={202}
+              height={202}
+              alt="Background-Icon"
+              src="/assets/home/bg-pattern-hero-home.svg"
+              className="absolute z-[-1]"
+            />
+            <Image 
+              width={202}
+              height={202}
+              alt="Home-Icon"
+              src={`/assets/home/illustration-${data.title}.svg`}
+            />
+
+            {/* Texts */}
+            <div className="
+                xl:text-center
+                max-md:text-center
+                xl:mt-12
+                max-md:mt-12
+                max-xl:ml-12
+                max-md:ml-0
+              "
+            >
+              <h1 className="text-xl mb-8">
+                {data.title.toUpperCase()}
+              </h1>
+              <p>
+                {data.text}
+              </p>
+            </div>
           </div>
-        </div>
-      ) )}
+        ) )}
+      </div>
     </section>
   )
 }

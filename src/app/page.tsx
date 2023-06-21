@@ -21,7 +21,7 @@ export default function Home() {
             grid
             grid-cols-1
             gap-5
-            max-xl:mt-[120px]
+            max-xl:mt-[7.5rem]
             xl:ml-8
           "
         >
