@@ -20,32 +20,41 @@ const footerItems = [
 
 const Footer: React.FC<FooterProps> = ({ card }) => {
   return (
-    <footer className="relative xl:mt-[10rem]">
-      {card && <CardFooter/> }
+    <footer className="
+        w-full
+        md:h-[612px]
+        xl:mt-[160px]
+        mt-20
+      "
+    >
       
+      {card && <CardFooter />}
+
       <section className="
           w-full
-          md:h-[25rem]
-          xl:mt-[12.5rem]
-          md:mt-[18.75rem]
+          xl:h-[393px]
+          h-auto
           bg-black
+          mt-[14rem]
           flex
           justify-center
-          items-center
-          max-md:text-center
         "
       >
-        <section className="xl:w-[55%] w-[100%] max-xl:px-6 mt-[10rem]" >
+        <div className="
+            xl:w-[1111px]
+            md:w-[690px]
+            w-full
+            md:h-[177px]
+            xl:mt-[142px]
+            mt-[200px]
+            max-xl:mb-20
+          "
+        >
           <div className="
               flex
               max-md:flex-col
-              items-center
+              max-md:items-center
               justify-between
-              mt-[72px]
-              pb-10
-              md:border-b-[1px]
-              border-white
-              border-opacity-10
             "
           >
             <Link href="/">
@@ -54,19 +63,28 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
                 height={27}
                 alt="Dark-Logo"
                 src="/assets/logo-light.png"
-                className="max-lg:w-[150px] max-md:w-auto max-md:mb-8 cursor-pointer"
+                className="cursor-pointer"
               />
             </Link>
 
-            <hr className="md:hidden w-full h-[1px] opacity-10"/>
+            <hr className="
+                mobile:w-[327px]
+                w-[80%]
+                h-[1px]
+                opacity-10
+                mt-10
+                md:hidden
+              "
+            />
 
             <ul className="
-                md:flex
+                md:w-[370px]
+                flex
+                max-md:flex-col
+                max-md:text-center
                 justify-between
                 text-white
                 tracking-[2px]
-                md:w-[370px]
-                max-md:mt-8
               "
             >
               {footerItems.map((item) => (
@@ -86,10 +104,13 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
             </ul>
           </div>
 
+          <hr className="w-full h-[1px] opacity-10 mt-10 max-md:hidden"/>
+
           <div className="
               flex
               max-md:flex-col
               max-md:items-center
+              max-md:text-center
               justify-between 
               mt-8
             "
@@ -100,8 +121,8 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
                 <p>3886 Welligton Street</p>
                 <p>Toronto, Ontario M9C 3J5</p>
               </div>
-
-              <div className="text-white opacity-50 mx-4 max-md:mb-8">
+    
+              <div className="text-white opacity-50 md:mx-4 max-md:mb-8">
                 <h3>Contact Us (Central Office)</h3>
                 <h3 className="max-md:font-normal">
                   P : +1 253-863-8967
@@ -111,7 +132,7 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
                 </h3>
               </div>
             </div>
-
+    
             <div className="
                 flex
                 justify-between
@@ -119,14 +140,14 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
                 max-sm:mb-16
               "
             >
-                <Facebook id="social-media" />
-                <Youtube id="social-media" />
-                <Twitter id="social-media" />
-                <Pinterest id="social-media" />
-                <Instagram  id="social-media" />
+              <Facebook id="social-media" />
+              <Youtube id="social-media" />
+              <Twitter id="social-media" />
+              <Pinterest id="social-media" />
+              <Instagram  id="social-media" />
             </div>
           </div>
-        </section>
+        </div>
       </section>
     </footer>
   )
