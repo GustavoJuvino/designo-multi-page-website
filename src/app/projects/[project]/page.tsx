@@ -1,11 +1,11 @@
 import React from 'react';
 import getData from "@/app/helper/getData";
 import NotFounded from "@/app/not-found";
-import Cards from "@/app/components/Design/Cards";
-import Projects from "@/app/components/Design/Projects";
+import Cards from "@/app/projects/[project]/Cards";
+import Projects from "@/app/components/Projects";
 import Footer from "@/app/components/Footer/Footer";
 import LeafBackground from "@/app/components/LeafBackground";
-import ContainerDesign from "@/app/components/Design/Container-Design";
+import ContainerDesign from "@/app/projects/[project]/Container-Design";
 
 const designs = ["web-design", "app-design", "graphic-design"] as const;
 type Design = (typeof designs)[number];
