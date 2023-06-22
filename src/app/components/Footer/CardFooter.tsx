@@ -55,10 +55,15 @@ const CardFooter = () => {
             alt="Circles-Background"
             src="/assets/bg-pattern-call-to-action.svg"
             className="
-              w-auto
-              h-auto
+              md:w-auto
+              w-[650px]
+              md:h-auto
+              h-[650px]
               absolute
               right-0
+              max-md:left-0
+              max-xl:top-[-6rem]
+              max-md:top-[-8rem]
               z-40
               object-cover
             "

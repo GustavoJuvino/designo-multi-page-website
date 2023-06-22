@@ -11,6 +11,7 @@ const designs = ["web-design", "app-design", "graphic-design"] as const;
 type Design = (typeof designs)[number];
 
 interface DataContainerProps {
+  design: string;
   title: string;
   text: string;
 }
@@ -39,50 +40,53 @@ export default async function page({params} : {params: {project: string}}) {
   if(isDesign(project)) {
     return (
       <section>
-        <div className="absolute top-[12rem] z-[-1]">
+        <div className="absolute top-[12rem] z-[-1] left-0">
           <LeafBackground />
         </div>
 
-        <section className="xl:mx-[165px] sm:mx-9">
-          <ContainerDesign
-            design="web"
-            title={dataContainer.title}
-            text={dataContainer.text}
-          />
-      
-          <div className="
-              w-[100%]
-              lg:mt-[160px]
-              mt-[120px]
-              lg:grid
-              2xl:grid-cols-[5fr_5fr_1fr]
-              lg:grid-cols-[8fr_1fr]
-            "
-          >
-            {dataCards.map((data: DataCardsProps) => (
-              <Cards 
-                key={data.title}
-                title={data.title}
-                text={data.text}
-                src={data.src}
-              />
-            ))}  
-          </div>
-        
-          <div className="
-              flex
-              max-xl:flex-col
-              justify-center
-              mt-[160px]
-              [&>*:nth-child(2)]:pt-7
-            "
-          >
-            {designs.map((design) => (
-              <Projects key={design} type={design === project ? null : design} />
-            ))}
-          </div>
+        <section className="w-full h-auto flex justify-center max-lg:sm:px-6">
+          <section className="xl:w-[1111px] md:w-[689px] w-full">
+            <ContainerDesign 
+              design={dataContainer.design}
+              title={dataContainer.title}
+              text={dataContainer.text}
+            />
 
+            <div className="
+                xl:mt-[160px]
+                mt-[120px]
+                grid
+                gap-y-8
+                max-sm:gap-y-10
+                xl:grid-cols-3
+              "
+            >
+              {dataCards.map((data: DataCardsProps) => (
+                <Cards 
+                  key={data.title}
+                  title={data.title}
+                  text={data.text}
+                  src={data.src}
+                />
+              ))}  
+            </div>
+        
+          </section>
         </section>
+        <div className="
+                flex
+                max-xl:flex-col
+                max-xl:gap-6
+                justify-center
+                xl:mt-[160px]
+                mt-[120px]
+              "
+            >
+              {designs.map((design) => (
+                <Projects key={design} type={design === project ? null : design} />
+              ))}
+            </div>
+
         <Footer card={true} />
       </section>
     )

@@ -1,12 +1,10 @@
 import React from 'react';
 import Image from "next/image";
 
-type Design = "web" | "app" | "graphic"
-
 interface ContainerDesignProps {
   title: string | undefined;
   text: string;
-  design: Design
+  design: string
 }
 
 const ContainerDesign: React.FC<ContainerDesignProps> = ({
@@ -16,20 +14,13 @@ const ContainerDesign: React.FC<ContainerDesignProps> = ({
 }) => {
 
   return (
-    <section className="
-        flex
-        items-center
-        justify-center
-        sm:mt-16
-        mt-8
-      "
-    >
+    <section className="flex items-center justify-center">
       <div className="
           w-full
           sm:h-64
           h-[320px]
           bg-peach
-          rounded-2xl
+          sm:rounded-2xl
           relative
           flex
           flex-col
@@ -43,7 +34,7 @@ const ContainerDesign: React.FC<ContainerDesignProps> = ({
           <h1 className="sm:text-5xl text-3xl max-sm:font-medium">
             {title}
           </h1>
-          <p className="sm:w-[60%] mt-6">
+          <p className="sm:w-[60%] w-[66%] mt-6">
             {text}
           </p>
         </div>

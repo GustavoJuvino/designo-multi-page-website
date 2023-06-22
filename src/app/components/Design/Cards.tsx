@@ -24,20 +24,20 @@ const Cards: React.FC<CardsProps> = ({
 
   return (
     <section className="
-            max-sm:flex
+            max-md:flex
             items-center
             justify-center
             w-full
             h-auto
-            mt-8
         "
     >
         <div className="
                 flex
-                lg:flex-col
-                max-sm:flex-col
-                lg:w-[350px]
-                max-sm:w-[350px]
+                xl:flex-col
+                max-md:flex-col
+                xl:w-[350px]
+                max-md:w-[350px]
+                max-small-mobile:w-auto
             "
         >
             <div>
@@ -50,11 +50,11 @@ const Cards: React.FC<CardsProps> = ({
                         w-[400px]
                         h-auto
                         object-cover
-                        lg:rounded-t-2xl
-                        sm:rounded-tr-none
+                        xl:rounded-t-2xl
+                        md:rounded-tr-none
                         rounded-t-2xl
-                        max-lg:rounded-l-2xl
-                        max-sm:rounded-b-none
+                        max-xl:rounded-l-2xl
+                        max-md:rounded-b-none
                     "
                 />
             </div>
@@ -64,20 +64,20 @@ const Cards: React.FC<CardsProps> = ({
                 onMouseOver={handleMouseEvent}
                 onMouseLeave={handleMouseEvent}
                 className="
-                    lg:w-full
-                    sm:w-[60%]
+                    xl:w-full
+                    md:w-[60%]
                     w-auto
-                    lg:h-[156px]
-                    max-sm:h-[156px]
+                    xl:h-[156px]
+                    max-md:h-[156px]
                     flex
                     flex-col
                     items-center
                     justify-center
                     text-center
                     bg-white-peach
-                    lg:rounded-b-2xl
-                    sm:rounded-r-2xl
-                    max-sm:rounded-b-2xl
+                    xl:rounded-b-2xl
+                    md:rounded-r-2xl
+                    max-md:rounded-b-2xl
                     cursor-pointer
                     duration-300
                     hover:bg-peach
@@ -87,7 +87,7 @@ const Cards: React.FC<CardsProps> = ({
                     <h1 className={`text-xl ${activeHover ? "text-white" : "text-peach"}`}>
                         {title.toUpperCase()}
                     </h1>
-                    <p className="lg:w-[80%] sm:w-[44%] w-[80%] mt-4">
+                    <p className="w-[80%] mt-4">
                         {text}
                     </p>
             </div>

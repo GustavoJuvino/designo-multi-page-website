@@ -22,7 +22,6 @@ export default function Home() {
             grid-cols-1
             gap-5
             max-xl:mt-[7.5rem]
-            xl:ml-8
           "
         >
           <div className="xl:hidden">
