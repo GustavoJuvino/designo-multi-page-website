@@ -48,6 +48,8 @@ const ContainerAbout: React.FC<ContainerAboutProps> = ({
                 ${type === 2 && "xl:h-[40rem] text-black"}
                 sm:h-[320px]
                 h-[486.8px]
+                relative
+                overflow-hidden
             `}
         >
             {/* Circle Background */}
@@ -72,7 +74,11 @@ const ContainerAbout: React.FC<ContainerAboutProps> = ({
                             left-[15%]
                         ` : 
                         `
-                            left-[20rem]
+                            ${reverse ? "xl:left-[20rem]" : "xl:left-0"}
+                            left-[8rem]
+                            max-xl:top-[-14rem]
+                            max-sm:top-0
+                            max-sm:left-0
                         `
                     }
                 `}
@@ -89,7 +95,7 @@ const ContainerAbout: React.FC<ContainerAboutProps> = ({
                 >
                     {title}
                 </h1>
-                <div className="sm:mt-8 mt-6 z-20">
+                <div className="sm:mt-8 mt-6 z-20 max-small-mobile:text-xs">
                     <p>{paragraph}</p><br/>
                     <p>{paragraph2}</p>
                 </div>
@@ -127,7 +133,7 @@ const ContainerAbout: React.FC<ContainerAboutProps> = ({
                 w-full
                 h-[320px]
                 object-cover
-                rounded-t-2xl
+                sm:rounded-t-2xl
                 z-[2]
                 xl:hidden
 

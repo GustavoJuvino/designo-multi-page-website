@@ -24,7 +24,6 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
         w-full
         md:h-[612px]
         xl:mt-[160px]
-        mt-20
       "
     >
       

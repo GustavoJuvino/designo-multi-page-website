@@ -79,7 +79,7 @@ export default async function page({params} : {params: {project: string}}) {
                 max-xl:gap-6
                 justify-center
                 xl:mt-[160px]
-                mt-[120px]
+                max-xl:my-[7.5rem]
               "
             >
               {designs.map((design) => (

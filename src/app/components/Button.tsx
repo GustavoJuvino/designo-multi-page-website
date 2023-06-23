@@ -1,13 +1,15 @@
 import React from 'react';
 
+type ButtonType = "light" | "dark"
+
 interface ButtonProps {
   value: string;
-  type: string;
+  type: ButtonType;
 }
 
 const Button: React.FC<ButtonProps> = ({
   value,
-  type
+  type,
 }) => {
   return (
     <button className={`
