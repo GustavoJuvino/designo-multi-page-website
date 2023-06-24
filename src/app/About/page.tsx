@@ -60,7 +60,7 @@ const locations = ["canada", "australia", "united-kingdom"]
 
 const page = () => {
   return (
-    <section>
+    <main>
       <section className="w-full h-auto flex justify-center">
         <div className="xl:w-[1111px] w-[689px] h-auto max-md:sm:mx-6">
           {ContainerData.slice(0, 2).map((data) => (
@@ -135,7 +135,7 @@ const page = () => {
         </div>
       </section>
       <Footer card={true} />
-    </section>
+    </main>
   )
 }
 
