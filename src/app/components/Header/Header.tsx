@@ -15,8 +15,8 @@ const Header = () => {
             w-full
             flex
             justify-center
-            mobile:my-16
-            my-8
+            sm:my-16
+            my-9
             max-md:px-6
             max-small-mobile:px-2
         "
