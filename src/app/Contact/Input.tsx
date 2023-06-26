@@ -12,12 +12,14 @@ const Input: React.FC<InputProps> = ({
     value
 }) => {
   return (
-    <div className="w-[380px] h-auto mb-[25px]">
+    <div className="mb-[25px]">
         {type === "text-area" ? 
             <textarea 
                 placeholder="Your Message"
                 className="
-                    w-[380px]
+                    xl:w-[380px]
+                    sm:w-[573px]
+                    w-full
                     h-[102px]
                     pb-16
                     bg-transparent
@@ -37,7 +39,9 @@ const Input: React.FC<InputProps> = ({
                 type={type}
                 placeholder={value}
                 className={`
-                    w-[380px]
+                    xl:w-[380px]
+                    sm:w-[573px]
+                    w-full
                     h-[38px]
                     pb-3
                     bg-transparent
@@ -47,6 +51,7 @@ const Input: React.FC<InputProps> = ({
                     pl-5
                     border-b-[1px]
                     hover:border-b-[3px]
+                    z-40
                 `}
             />  
         }

@@ -6,7 +6,16 @@ const Contact = () => {
   return (
     <section>
         <section className="flex justify-center">
-            <section className="w-[1111px] h-[480px]">
+            <section className="
+                xl:w-[1111px]
+                sm:w-[689px]
+                w-full
+                xl:h-[480px]
+                sm:h-[711px]
+                h-full
+                max-xl:sm:mx-6
+              "
+            >
                 <ContactContainer />
             </section>
         </section>
