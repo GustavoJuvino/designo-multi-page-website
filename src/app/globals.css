@@ -52,6 +52,8 @@ ul, li{
 }
 
 input::-webkit-input-placeholder {color: white; opacity: 60%;} /* Chrome/Opera/Safari */
+textarea::-webkit-input-placeholder {color: white; opacity: 60%;} /* Chrome/Opera/Safari */
 input::-moz-placeholder {color: white; opacity: 60%;} /* Firefox 19+ */
-input:-ms-input-placeholder {color: white; opacity: 60%;} /* IE 10+ */
-input:-moz-placeholder {color: white; opacity: 60%;}  /* Firefox 18- */
+textarea::-moz-placeholder {color: white; opacity: 60%;} /* Firefox 19+ */
+
+
