@@ -2,10 +2,6 @@ import React from 'react';
 import Footer from "../components/Footer/Footer";
 import Location from "../components/Map";
 
-// 1: 43.700319533246905, -79.2515784000413 zoom: 15
-// 2: -33.109299323378, 151.6326088628339 zoom: 13
-// 3: 53.72958130262888, -1.3340701267404498 zoom: 13
-
 const LocationData = [
   {
     country: "Canada",
@@ -64,7 +60,7 @@ const LocationData = [
   },
 ]
 
-const page= () => {
+const Locations = () => {
   return (
     <main>
       <section className="w-full h-auto flex justify-center">
@@ -86,4 +82,4 @@ const page= () => {
   )
 }
 
-export default page;
+export default Locations;

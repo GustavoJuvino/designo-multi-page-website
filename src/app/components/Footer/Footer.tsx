@@ -20,11 +20,11 @@ const footerItems = [
 
 const Footer: React.FC<FooterProps> = ({ card }) => {
   return (
-    <footer className="
+    <footer className={`
         w-full
-        md:h-[612px]
+        ${card ? "md:h-[612px]" : "h-auto"}
         xl:mt-[160px]
-      "
+      `}    
     >
       
       {card && <CardFooter />}

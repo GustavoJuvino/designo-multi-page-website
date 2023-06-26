@@ -5,14 +5,18 @@ type ButtonType = "light" | "dark"
 interface ButtonProps {
   value: string;
   type: ButtonType;
+  click?: React.MouseEventHandler;
 }
 
 const Button: React.FC<ButtonProps> = ({
   value,
   type,
+  click,
 }) => {
   return (
-    <button className={`
+    <button 
+      onClick={click}
+      className={`
           w-[152px]
           h-14
           rounded-lg
