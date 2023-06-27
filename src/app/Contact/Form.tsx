@@ -2,70 +2,128 @@
 import React, { useState } from 'react';
 import Button from "../components/Button";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import styles from "./styles/Form.module.css"
+import { Error } from "../../../public/assets/svgs";
+  
+
+const ContactFormSchema = z.object({
+    name: z.string()
+        .nonempty("Can't be empty"),
+    email: z.string()
+        .nonempty("Can't be empty")
+        .email("It must be a valid email"),
+    phone: z.string()
+        .nonempty("Can't be empty"),
+    message: z.string()
+        .nonempty("Can't be empty")
+        .min(50, "At least 50 characters")
+})
+
+type ContactFormData = z.infer<typeof ContactFormSchema>
 
 const Form = () => {
-    const [output, setOutput] = useState("");
-    const { register, handleSubmit } = useForm();
-    
-    function createUser(data: any) {
-      setOutput(JSON.stringify(data, null, 2));
-    }
+    const [characters, setCharacters] = useState(0);
+
+    const { 
+            register,
+            handleSubmit,
+            formState: { errors } 
+        } = useForm<ContactFormData>({
+            resolver: zodResolver(ContactFormSchema),
+        });
 
     return (
         <form
-            onSubmit={handleSubmit(createUser)}    
+            onSubmit={handleSubmit((data) => console.log(data))}    
             className="
                 flex
                 flex-col
                 gap-6
+                xl:pt-[54px]
                 max-xl:mx-6
                 max-xl:sm:w-[84%]
                 max-sm:w-[55%]
                 z-40
             "
         >
-            <input 
-                className={styles.input}
-                placeholder="Name"
-                type="text"
-                {...register("name")} 
-            />
+            <div id={styles.InputContainer}>
+                <input 
+                    className={styles.input}
+                    placeholder="Name"
+                    type="text"
+                    {...register("name")} 
+                />
+                {errors.name &&
+                    <span className={styles.error}>
+                        <p>{errors.name.message}</p>
+                        <Error id="IconError" />
+                    </span>
+                 }
+            </div>
 
-            <input 
-                className={styles.input}
-                placeholder="Email Adress"
-                type="email"
-                {...register("email")} 
-            />
+            <div id={styles.InputContainer}>
+                <input 
+                    className={styles.input}
+                    placeholder="Email Adress"
+                    type="email"
+                    {...register("email")} 
+                />
+                {errors.email &&
+                    <span className={styles.error}>
+                        <p>{errors.email.message}</p>
+                        <Error id="IconError" />
+                    </span>
+                 }
+            </div>
 
-            <input 
-                className={styles.input}
-                placeholder="Phone"
-                type="phone"
-                {...register("phone")} 
-            />
+            <div id={styles.InputContainer}>
+                <input 
+                    className={styles.input}
+                    placeholder="Phone"
+                    type="phone"
+                    {...register("phone")} 
+                />
+                {errors.phone &&
+                    <span className={styles.error}>
+                        <p>{errors.phone.message}</p>
+                        <Error id="IconError" />
+                    </span>
+                 }
+            </div>
 
-            <textarea 
-                className={styles.text_area}
-                placeholder="Your Message"
-                {...register("message")}
-            />
+            <div className="flex flex-col">
+                <textarea 
+                    className={styles.text_area}
+                    placeholder="Your Message"
+                     {...register("message")}
+                    onChange={(e) => setCharacters(e.target.value.length)}
+                />
+                <div className="flex justify-between mt-3 relative">
+                    <span className="pl-6 text-white">
+                        {`${characters} / 50`}
+                    </span>
+                    {errors.message &&
+                        <span className={styles.error}>
+                            <p>{errors.message.message}</p>
+                            <Error id="IconError" />
+                        </span>
+                    }
+                </div>
+            </div>
         
             <div className="
                     flex
                     sm:justify-end
                     justify-center
+                    xl:pb-[54px]
                     max-sm:pt-10
-                    max-sm:pb-[72px]
+                    max-xl:pb-[72px]
                 "
             >
                 <Button type="light" value="SUBMIT" />
             </div>
-
-            {output && (
-                <pre>{output}</pre>
-            )}
         </form>
     )
 }

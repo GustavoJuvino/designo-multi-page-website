@@ -6,7 +6,7 @@ const ContactContainer = () => {
   return (
     <section className="
             w-full
-            h-full
+            h-auto
             sm:rounded-2xl
             bg-peach 
             flex
@@ -26,7 +26,7 @@ const ContactContainer = () => {
             className={`
                 max-sm:w-[292px]
                 absolute
-                xl:left-0
+                xl:left-[-1rem]
                 sm:left-[-8rem]
                 left-0
                 max-sm:pr-1
@@ -42,6 +42,7 @@ const ContactContainer = () => {
                 text-white
                 max-xl:sm:w-[84%]
                 w-[56%]
+                max-xl:mt-[72px]
                 max-xl:mb-12
                 max-sm:mt-[72px]
                 z-50
