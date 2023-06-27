@@ -16,7 +16,7 @@ const Contact = () => {
                 max-xl:sm:mx-6
               "
             >
-                <ContactContainer />
+              <ContactContainer />
             </section>
         </section>
         <Footer card={false} />

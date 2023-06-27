@@ -1,0 +1,35 @@
+.input {
+    width: 380px;
+    height: 38px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid white;
+    z-index: 40;
+}
+
+.text_area {
+    width: 380px;
+    height: 102px;
+    padding-bottom: 64px;
+    padding-left: 16px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid white;
+    overflow-y: hidden;
+    resize: none;
+}
+
+
+.input:hover, .text_area:hover {
+    border-bottom: 3px solid white;
+}
+
+@media (max-width: 1280px) {
+    .input, .text_area {
+        width: 100%;
+    }
+}
