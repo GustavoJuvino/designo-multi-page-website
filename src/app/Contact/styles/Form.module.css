@@ -48,17 +48,25 @@
 }
 
 @media (max-width: 1280px) {
-    .input, .text_area {
+    .input {
+        width: 65%;
+    }
+    .text_area {
         width: 100%;
     }
 }
 
 @media (max-width: 640px) {
+    .input {
+        width: 100%;
+    }
+    
     #InputContainer {
         flex-direction: column;
         align-items: end;
         margin-bottom: 20px;
     }
+    
     .error {
         font-size: 15px;
         margin-top: 10px;

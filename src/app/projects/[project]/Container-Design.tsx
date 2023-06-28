@@ -62,7 +62,7 @@ const ContainerDesign: React.FC<ContainerDesignProps> = ({
           height={300}
           alt="Circle-Background"
           src="/assets/bg-pattern-small-circle.svg"
-          className="sm:hidden absolute right-0 rotate-[280deg]"
+          className="sm:hidden absolute right-0 top-0 rotate-[280deg]"
         />
       </div>
     </section>

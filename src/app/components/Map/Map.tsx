@@ -40,8 +40,6 @@ const LocationContainer: React.FC<MapProps> = ({
         max-xl:flex-col-reverse
         sm:gap-8
         xl:pb-8
-        pb-10
-        max-xl:sm:mb-[7.5rem]
         ${reverse && "xl:flex-row-reverse"}
       `}
     >

@@ -1,8 +1,8 @@
 import React from 'react'
 import ContainerAbout from "./Container-About"
+import Locations from "../components/Locations"
 import Footer from "../components/Footer/Footer"
-import Image from "next/image"
-import Button from "../components/Button"
+import LeafBackground from "../components/LeafBackground"
 
 const ContainerData = [
   {
@@ -56,12 +56,13 @@ const ContainerData = [
   },
 ]
 
-const locations = ["canada", "australia", "united-kingdom"]
-
-const page = () => {
+const About = () => {
   return (
     <main>
       <section className="w-full h-auto flex justify-center">
+        <div className="absolute top-[28rem] left-0 z-[-1]">
+          <LeafBackground />
+        </div>
         <div className="xl:w-[1111px] w-[689px] h-auto max-md:sm:mx-6">
           {ContainerData.slice(0, 2).map((data) => (
             <div className="xl:pb-[160px] sm:pb-[7.5rem] pb-0">
@@ -76,47 +77,12 @@ const page = () => {
             </div>
           ))}
 
-          <div className="
-              flex
-              max-xl:flex-col
-              xl:justify-between
-              max-xl:items-center
-              max-xl:sm:gap-20
-              gap-12
-              max-sm:mt-[7.5rem]
-            "
-          >
-            {locations.map((location) => (
-              <div className="flex flex-col justify-center items-center">
-                <div>
-                  <Image 
-                    width={202}
-                    height={202}
-                    alt="Circle-Background-Icon"
-                    src="/assets/home/bg-pattern-hero-home.svg"
-                    className="absolute z-[-1]"
-                  />
-                  <Image 
-                    width={202}
-                    height={202}
-                    alt="Location-Icon"
-                    src={`/assets/about/illustration-${location}.svg`}
-                  />
-                </div>
-
-                <div className="mt-12 flex flex-col items-center">
-                  <h1 className="text-xl font-medium mb-8">
-                    {location.replaceAll("-", " ").toUpperCase()}
-                  </h1>
-                  <Button 
-                    type="dark"
-                    value="SEE LOCATION"
-
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+          <section className="w-full relative">
+            <div className="absolute right-[-40rem] top-[8rem] z-[-1] rotate-180">
+              <LeafBackground />
+            </div>
+            <Locations />
+          </section>
 
           <div>
             {ContainerData.slice(2).map((data) => (
@@ -139,4 +105,4 @@ const page = () => {
   )
 }
 
-export default page
+export default About;

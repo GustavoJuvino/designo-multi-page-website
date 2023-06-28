@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from 'react';
 import Button from "../components/Button";
+import { Error } from "../../../public/assets/svgs";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import toast, { Toaster } from "react-hot-toast";
 import styles from "./styles/Form.module.css"
-import { Error } from "../../../public/assets/svgs";
-  
 
 const ContactFormSchema = z.object({
     name: z.string()
@@ -34,6 +34,16 @@ const Form = () => {
             resolver: zodResolver(ContactFormSchema),
         });
 
+        const notify = () => {
+            if(
+                errors.name ||
+                errors.email ||
+                errors.phone ||
+                errors.message 
+            ) toast.error("Form not sent :(");
+            else toast.success("Form sent successfully :)");
+        }
+
     return (
         <form
             onSubmit={handleSubmit((data) => console.log(data))}    
@@ -48,6 +58,7 @@ const Form = () => {
                 z-40
             "
         >
+            <Toaster />
             <div id={styles.InputContainer}>
                 <input 
                     className={styles.input}
@@ -113,7 +124,8 @@ const Form = () => {
                 </div>
             </div>
         
-            <div className="
+            <div 
+                className="
                     flex
                     sm:justify-end
                     justify-center
@@ -122,7 +134,7 @@ const Form = () => {
                     max-xl:pb-[72px]
                 "
             >
-                <Button type="light" value="SUBMIT" />
+                <Button click={notify} type="light" value="SUBMIT" />
             </div>
         </form>
     )

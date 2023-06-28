@@ -49,10 +49,9 @@ const Header = () => {
                 "
             >
                 {headerItems.map((item) => (
-                    <li>
+                    <li key={item}>
                         <Link 
                             href={item === "Our company" ? "/About" : item}
-                            key={item}
                             className="
                                 tracking-[2px]
                                 max-sm:hidden

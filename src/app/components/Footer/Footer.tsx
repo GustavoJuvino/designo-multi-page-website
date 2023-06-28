@@ -13,31 +13,37 @@ import {
 interface FooterProps { "card": boolean }
 
 const footerItems = [
-  "our company",
-  "locations",
-  "contact"
+  "Our company",
+  "Locations",
+  "Contact"
 ]
 
 const Footer: React.FC<FooterProps> = ({ card }) => {
   return (
     <footer className={`
         w-full
-        ${card ? "md:h-[612px]" : "h-auto"}
-        xl:mt-[160px]
+        ${card ? 
+          `
+            md:h-[612px]
+            xl:mt-[160px]
+            mt-[120px]
+          ` 
+          : "h-auto"
+          }
       `}    
     >
       
       {card && <CardFooter />}
 
-      <section className="
+      <section className={`
           w-full
           xl:h-[393px]
           h-auto
           bg-black
-          mt-[14rem]
+          ${card ? "mt-[14rem]" : "xl:mt-[160px] mt-[120px]"}
           flex
           justify-center
-        "
+        `}  
       >
         <div className="
             xl:w-[1111px]
@@ -97,7 +103,9 @@ const Footer: React.FC<FooterProps> = ({ card }) => {
                     max-md:mt-8
                   "
                 >
-                  {item.toUpperCase()}
+                  <Link href={item === "Our company" ? "/About" : item}>
+                    {item.toUpperCase()}
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -1,8 +1,13 @@
+"use client";
+
 import React from 'react';
 import Button from "../Button";
 import Image from "next/image";
+import { useRouter } from 'next/navigation'
 
 const CardFooter = () => {
+  const router = useRouter()
+
   return (
     <section className="flex justify-center">
       <div className="
@@ -43,6 +48,7 @@ const CardFooter = () => {
           </div>
           <div className="max-xl:mt-8 z-50">
             <Button 
+              click={() => router.push("/Contact")}
               value="GET IN TOUCH"
               type="light"
             />

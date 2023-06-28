@@ -8,6 +8,8 @@ const ContactContainer = () => {
             w-full
             h-auto
             sm:rounded-2xl
+            xl:mb-[160px]
+            mb-[120px]
             bg-peach 
             flex
             max-xl:flex-col

@@ -56,7 +56,7 @@ export default async function page({params} : {params: {project: string}}) {
                 xl:mt-[160px]
                 mt-[120px]
                 grid
-                gap-y-8
+                gap-8
                 max-sm:gap-y-10
                 xl:grid-cols-3
               "

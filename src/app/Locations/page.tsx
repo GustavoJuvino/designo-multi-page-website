@@ -64,7 +64,17 @@ const Locations = () => {
   return (
     <main>
       <section className="w-full h-auto flex justify-center">
-        <section className="xl:w-[1110px] w-[689px] h-auto max-xl:sm:mx-10 max-sm:mb-[7.5rem]">
+        <section className="
+            xl:w-[1110px]
+            w-[689px]
+            h-auto
+            flex
+            flex-col
+            max-xl:sm:mx-10
+            max-xl:sm:gap-[117px]
+            gap-10
+          "
+        >
           {LocationData.map((location) => (
             <Location 
               country={location.country}

@@ -34,6 +34,7 @@ const IconsHome = () => {
         flex
         justify-center
         xl:mt-[10rem]
+        mt-[7.5rem]
         max-mobile:mx-6
         max-md:mb-[120px]
       "
@@ -41,7 +42,10 @@ const IconsHome = () => {
       <div className="
           xl:w-[1111px]
           h-auto
-          xl:flex
+          flex
+          max-xl:flex-col
+          max-xl:sm:gap-8
+          max-sm:gap-20
           justify-between
         "
       >
@@ -55,10 +59,6 @@ const IconsHome = () => {
               xl:h-[412px]
               md:h-[202px]
               mobile:h-[412px]
-              max-xl:pt-[88px]
-              max-md:pt-0
-              max-xl:mt-8
-              max-md:mt-20
               flex
               xl:flex-col
               max-md:flex-col
