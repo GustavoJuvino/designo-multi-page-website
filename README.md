@@ -14,7 +14,7 @@
 
 <h4 align="center">
     <a align="center" href="https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT/hub">Front-end mentor challenge.</a> //
-     <a align="center" href="https://next-photo-snap-87oy1bosy-gustavojuvino.vercel.app/">Designo Website</a>
+     <a align="center" href="https://designo-multi-page-website-hazel.vercel.app/">Designo Website</a>
 </h4>
 
 <br>
