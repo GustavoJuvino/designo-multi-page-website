@@ -78,9 +78,6 @@ const About = () => {
           ))}
 
           <section className="w-full relative">
-            <div className="absolute right-[-40rem] top-[8rem] z-[-1] rotate-180">
-              <LeafBackground />
-            </div>
             <Locations />
           </section>
 

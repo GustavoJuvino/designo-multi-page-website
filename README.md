@@ -2,7 +2,7 @@
 
 <h4 align="center">
     This project is a challenge that I took from <a href="https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW">frontendmentor.io </a> 
-    which consists of building a multiple pages website.<br>
+    which consists of building a multiple responsive pages website.<br>
     I used great libraries in this project, such as: 
     <a href="https://react-hot-toast.com/">React hot toast🍞</a>,
     <a href="https://react-hook-form.com/">React hook form</a>, 
@@ -33,19 +33,8 @@
 <!-- Desktop -->
 <h2 align="center">Desktop Version 🖥️</h2>
 <img src="./github-imgs/desktop-1.png" title="part1">
-<!-- <img src="./github-imgs/desktop2.png" title="part2">
-<img src="./github-imgs/desktop3.png" title="part3">
-<img src="./github-imgs/desktop4.png" title="part4">
-<img src="./github-imgs/desktop5.png" title="part5"> -->
-
-<!-- <h2 align="center">Mobile Version 📱</h2>
-<img src="./github-imgs/mobile1.png" title="part1">
-<img src="./github-imgs/mobile2.png" title="part2">
-<img src="./github-imgs/mobile3.png" title="part3">
-<img src="./github-imgs/mobile4.png" title="part4">
-<img src="./github-imgs/mobile5.png" title="part5">
-<img src="./github-imgs/mobile6.png" title="part6">
-<img src="./github-imgs/mobile7.png" title="part7">
-<img src="./github-imgs/mobile8.png" title="part8">
-<img src="./github-imgs/mobile9.png" title="part9"> -->
+<img src="./github-imgs/desktop-2.png" title="part2">
+<img src="./github-imgs/desktop-3.png" title="part3">
+<img src="./github-imgs/desktop-4.png" title="part4">
+<img src="./github-imgs/desktop-5.png" title="part5">
 <!--Made By Gustavo J. Souza -->
