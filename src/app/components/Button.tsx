@@ -5,7 +5,7 @@ type ButtonType = "light" | "dark"
 interface ButtonProps {
   value: string;
   type: ButtonType;
-  click?: React.MouseEventHandler;
+  click?: React.MouseEventHandler
 }
 
 const Button: React.FC<ButtonProps> = ({
