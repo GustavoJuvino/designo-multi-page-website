@@ -13,8 +13,8 @@
 <br>
 
 <h4 align="center">
-    <a align="center" href="https://www.frontendmentor.io/solutions/responsive-photo-snap-project-using-react-next-and-tailwind-9XdOc2h3V3">Front-end mentor challenge.</a> //
-     <a align="center" href="https://next-photo-snap-87oy1bosy-gustavojuvino.vercel.app/">Designo Website</a>
+    <a align="center" href="https://www.frontendmentor.io/solutions/responsive-designo-website-project-using-react-next-and-tailwind-7-QAd_C_Na">Front-end mentor challenge.</a> //
+     <a align="center" href="https://designo-multi-page-website-hazel.vercel.app/">Designo Website</a>
 </h4>
 
 <br>
