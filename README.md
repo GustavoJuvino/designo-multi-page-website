@@ -28,7 +28,7 @@
 
 <!-- Desktop -->
 <h2 align="center">Desktop Version 🖥️</h2>
-<img src="./github-imgs/desktop1.png" title="part1">
+<img src="./github-imgs/desktop-1.png" title="part1">
 <!-- <img src="./github-imgs/desktop2.png" title="part2">
 <img src="./github-imgs/desktop3.png" title="part3">
 <img src="./github-imgs/desktop4.png" title="part4">
