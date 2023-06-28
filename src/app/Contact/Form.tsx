@@ -5,6 +5,7 @@ import { Error } from "../../../public/assets/svgs";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import toast, { Toaster } from 'react-hot-toast';
 import styles from "./styles/Form.module.css"
 
 const ContactFormSchema = z.object({
@@ -33,6 +34,17 @@ const Form = () => {
             resolver: zodResolver(ContactFormSchema),
         });
 
+    const notify = () => {
+        if(
+            characters === 0 ||
+            characters < 50 ||
+            errors.name ||
+            errors.email ||
+            errors.phone
+        ) toast.error('Form not sent')
+        else toast.success('Form sent succesfully')
+    };
+
     return (
         <form
             onSubmit={handleSubmit((data) => console.log(data))}    
@@ -47,6 +59,7 @@ const Form = () => {
                 z-40
             "
         >
+            <Toaster />
             <div id={styles.InputContainer}>
                 <input 
                     className={styles.input}
@@ -84,11 +97,12 @@ const Form = () => {
                     type="phone"
                     {...register("phone")} 
                 />
-                {errors.phone &&
+                {errors.phone && 
                     <span className={styles.error}>
                         <p>{errors.phone.message}</p>
                         <Error id="IconError" />
                     </span>
+                    
                  }
             </div>
 
@@ -103,7 +117,7 @@ const Form = () => {
                     <span className="pl-6 text-white">
                         {`${characters} / 50`}
                     </span>
-                    {errors.message &&
+                    {errors.message && 
                         <span className={styles.error}>
                             <p>{errors.message.message}</p>
                             <Error id="IconError" />
@@ -122,7 +136,11 @@ const Form = () => {
                     max-xl:pb-[72px]
                 "
             >
-                <Button type="light" value="SUBMIT" />
+                <Button 
+                    click={() => setTimeout(notify, 1500)}
+                    type="light"
+                    value="SUBMIT" 
+                />
             </div>
         </form>
     )
