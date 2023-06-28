@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Designo 🖥💻</h1>
 
-## Getting Started
+<h4 align="center">
+    This project is a challenge that I took from <a href="https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW">frontendmentor.io </a><br>which consists of building a
+    multipe pages website. I used great libraries in this project such as: <a href="https://react-hot-toast.com/">React hot toast🍞</a>,
+    <a href="https://react-hook-form.com/">React hook form</a>, <a href="https://zod.dev/">Zod</a> and 
+    <a href="https://react-leaflet.js.org/">React Leaflet</a>. I used them mainly in my form, specially in the validation.
+</h4>
+<br>
 
-First, run the development server:
+<h4 align="center">
+    <a align="center" href="https://www.frontendmentor.io/solutions/responsive-photo-snap-project-using-react-next-and-tailwind-9XdOc2h3V3">Front-end mentor challenge.</a> //
+     <a align="center" href="https://next-photo-snap-87oy1bosy-gustavojuvino.vercel.app/">Designo Website</a>
+</h4>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h6 align="center"> This project was created with:</h6>
+<br>
+ <div align="center">
+    <img src="https://www.svgrepo.com/show/493719/react-javascript-js-framework-facebook.svg" width=60px height=60px alt="React"/>
+    <img src="https://www.svgrepo.com/show/342062/next-js.svg" width=60px height=60px alt="Next"/>
+    <img src="https://www.svgrepo.com/show/374146/typescript-official.svg"  width=60px height=60px alt="TypeScript"/>
+    <img src="https://www.svgrepo.com/show/374118/tailwind.svg"  width=60px height=60px alt="Tailwind CSS"/>
+ </div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<br><br>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<!-- Desktop -->
+<h2 align="center">Desktop Version 🖥️</h2>
+<img src="./github-imgs/desktop1.png" title="part1">
+<!-- <img src="./github-imgs/desktop2.png" title="part2">
+<img src="./github-imgs/desktop3.png" title="part3">
+<img src="./github-imgs/desktop4.png" title="part4">
+<img src="./github-imgs/desktop5.png" title="part5"> -->
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<!-- <h2 align="center">Mobile Version 📱</h2>
+<img src="./github-imgs/mobile1.png" title="part1">
+<img src="./github-imgs/mobile2.png" title="part2">
+<img src="./github-imgs/mobile3.png" title="part3">
+<img src="./github-imgs/mobile4.png" title="part4">
+<img src="./github-imgs/mobile5.png" title="part5">
+<img src="./github-imgs/mobile6.png" title="part6">
+<img src="./github-imgs/mobile7.png" title="part7">
+<img src="./github-imgs/mobile8.png" title="part8">
+<img src="./github-imgs/mobile9.png" title="part9"> -->
+<!--Made By Gustavo J. Souza -->

@@ -137,7 +137,7 @@ const Form = () => {
                 "
             >
                 <Button 
-                    click={() => setTimeout(notify, 1500)}
+                    click={() => setTimeout(notify, 1000)}
                     type="light"
                     value="SUBMIT" 
                 />
