@@ -1,10 +1,10 @@
-<h1 align="center">Designo 🖥💻</h1>
+<h1 align="center">Designo multi-page website 🖥💻</h1>
 
 <h4 align="center">
     This project is a challenge that I took from <a href="https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW">frontendmentor.io </a><br>which consists of building a
-    multipe pages website. I used great libraries in this project such as: <a href="https://react-hot-toast.com/">React hot toast🍞</a>,
+    multiple pages website. I used great libraries in this project such as: <a href="https://react-hot-toast.com/">React hot toast🍞</a>,
     <a href="https://react-hook-form.com/">React hook form</a>, <a href="https://zod.dev/">Zod</a> and 
-    <a href="https://react-leaflet.js.org/">React Leaflet</a>. I used them mainly in my form, specially in the validation.
+    <a href="https://react-leaflet.js.org/">React Leaflet</a>. I used them mainly in my form, especially in the validation.
 </h4>
 <br>
 
