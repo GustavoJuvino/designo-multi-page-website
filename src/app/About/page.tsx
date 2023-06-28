@@ -4,6 +4,8 @@ import Locations from "../components/Locations"
 import Footer from "../components/Footer/Footer"
 import LeafBackground from "../components/LeafBackground"
 
+export const metadata = {title: "About"}
+
 const ContainerData = [
   {
     type: 1,

@@ -3,6 +3,8 @@ import Footer from "../components/Footer/Footer";
 import ContactContainer from "./Contact-Container";
 import Locations from "../components/Locations";
 
+export const metadata = {title: "Contact"}
+
 const Contact = () => {
   return (
     <section>

@@ -7,6 +7,8 @@ import Footer from "@/app/components/Footer/Footer";
 import LeafBackground from "@/app/components/LeafBackground";
 import ContainerDesign from "@/app/projects/[project]/Container-Design";
 
+export const metadata = {title: "Projects"}
+
 const designs = ["web-design", "app-design", "graphic-design"] as const;
 type Design = (typeof designs)[number];
 

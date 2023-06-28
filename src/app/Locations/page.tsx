@@ -2,6 +2,8 @@ import React from 'react';
 import Footer from "../components/Footer/Footer";
 import Location from "../components/Map";
 
+export const metadata = {title: "Locations"}
+
 const LocationData = [
   {
     country: "Canada",
