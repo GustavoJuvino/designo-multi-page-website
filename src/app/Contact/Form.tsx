@@ -42,7 +42,7 @@ const Form = () => {
             errors.email ||
             errors.phone
         ) toast.error('Form not sent')
-        else toast.success('Form sent succesfully')
+        else toast.success('Form sent successfully')
     };
 
     return (
