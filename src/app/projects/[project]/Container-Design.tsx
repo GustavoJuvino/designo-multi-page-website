@@ -44,7 +44,7 @@ const ContainerDesign: React.FC<ContainerDesignProps> = ({
           width={300}
           height={300}
           alt="Circles-Background"
-          src={`/assets/${design}-design/bg-pattern-intro-${design}.svg`}
+          src={`/assets/${design.toLowerCase()}-design/bg-pattern-intro-${design.toLowerCase()}.svg`}
           className={`
             max-sm:hidden
             absolute
